@@ -4,7 +4,7 @@
 	<div class="video-container">
 		<div class="title-container">
 			<div class="headline">
-				<h1>Welcome to our Company</h1>
+				<h1>	Welcome to our Company</h1>
 			</div>
 			<div class="description">
 				<div class="inner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
@@ -69,10 +69,6 @@
 			</p>
 		</div>
 	</div>
-	<hr>
-	<footer>
-		<p>&copy; Company 2014</p>
-	</footer>
 </div>
 
 
