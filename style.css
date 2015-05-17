@@ -38,6 +38,7 @@ body {
   width: 100%;
   overflow: hidden;
   background: #000;
+  border: solid white 30px;
 }
 .video-container .poster img {
   width: 100%;
@@ -53,9 +54,10 @@ body {
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 35%;
+  /*top: 50%;*/
   width: 100%;
-  text-align: center;
+  padding: 10px;
+  text-align: right;
   color: #fff;
 }
 .video-container .description .inner {

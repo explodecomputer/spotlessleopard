@@ -25,4 +25,4 @@
   </head>
 
   <body>
-  <?php get_sidebar(); ?>
+  
