@@ -3,18 +3,35 @@
 <div class="homepage-hero-module">
 	<div class="video-container">
 		<div class="title-container">
-				<div class="row">
-					<div class="col-md-2">
-						<?php get_sidebar(); ?>
-					</div>
-					<div class="col-md-8">
-					</div>
-					<div class="col-md-2">
-					<h1> Spotless Leopard </h1>
-						<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-					</div>
+			<div class="container">
+
+<!-- 		<p> hello</p>
+
+			<div class="headline">
+               	<h1>Welcome to our Company</h1>
+            </div>
+            <div class="description">
+                <div class="inner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+            </div>
+ -->
+
+
+ 			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6 welcome">
+
+				<h1>hello. welcome to the <span class="sl">spotless leopard</span>.</h1>
+				</div>
+				<div class="col-md-3">
+<!-- 								<p><button type="button" class="btn btn-default btn-lg">Next pop-up</button></p>
+				<p><button type="button" class="btn btn-default btn-lg">Find the van</button></p>
+ -->
+				</div>
+			</div>				
 
 			</div>
+
 		</div>
 		<div class="filter"></div>
 		<video autoplay preload muted class="fillWidth">

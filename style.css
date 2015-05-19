@@ -10,12 +10,27 @@ Tags: responsive, video
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
-This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+
+
+
+/* 
+
+Imports
+
 */
 
 @import url('css/bootstrap.min.css'); 
-body { 
-}
+
+
+
+
+/*
+
+Video background
+
+*/
+
 
 .homepage-hero-module {
   border-right: none;
@@ -38,7 +53,6 @@ body {
   width: 100%;
   overflow: hidden;
   background: #000;
-  border: solid white 30px;
 }
 .video-container .poster img {
   width: 100%;
@@ -54,10 +68,10 @@ body {
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  /*top: 50%;*/
+  /*top: 35%;*/
+  bottom: 0;
   width: 100%;
-  padding: 10px;
-  text-align: right;
+  text-align: center;
   color: #fff;
 }
 .video-container .description .inner {
@@ -84,4 +98,96 @@ body {
 }
 .video-container video.fillWidth {
   width: 100%;
+}
+
+
+/*
+
+Navigation menu
+
+*/
+
+
+.welcome {
+  margin-top: 30%;
+}
+
+.welcome-button {
+  font-family: 'Passion One', cursive;
+
+}
+
+.welcome h1 {
+
+  font-family: 'Passion One', cursive;
+}
+
+.spotlessnav {
+  /*padding-top: 50px;*/
+/*  text-align: center;
+  margin-top: -100%;
+*/  /*margin-top: 30%;*/
+}
+
+.spotlessnav  ul {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;  
+  list-style-type: none;
+  color: white;
+  line-height: 200%;
+} 
+
+.spotlessnav  ul li {
+  display: inline;
+}
+
+.spotlessnav  ul ul {
+
+} 
+
+.spotlessnav  li {
+  font-size: 20px;  
+  margin: 4px;
+  /*font-family: 'Passion One', cursive;*/
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Lobster', cursive;
+  text-transform: lowercase;
+}
+
+.spotlessnav  li a {
+  /*border: 2px solid white;*/
+  color: white;
+  padding: 8px 10px;
+  background-color: red;
+  border-radius: 15px;
+}
+
+.sl {
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 0px 7px;
+}
+
+.spotlessnav  li a:hover {
+  text-decoration: none;
+  background-color: black;
+
+}
+
+.spotlessnav  li ul {
+
+}
+
+.spotlessnav  li li {
+
+}
+.spotlessnav  li li a {
+
+}
+
+.spotlessnav .current_page_item a {
+  /*border: 2px solid white;*/
+  background-color: white;
+  color: red;
 }
