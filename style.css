@@ -36,6 +36,10 @@ Video background
   border-right: none;
   border-left: none;
   position: relative;
+  border-right: solid white 10px;
+  border-left: solid white 10px;
+  border-bottom: solid white 10px;
+
 }
 .no-video .video-container video,
 .touch .video-container video {
@@ -62,13 +66,13 @@ Video background
 .video-container .filter {
   z-index: 100;
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
   width: 100%;
 }
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  /*top: 35%;*/
+  top: 45%;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -99,7 +103,6 @@ Video background
 .video-container video.fillWidth {
   width: 100%;
 }
-
 
 /*
 
@@ -167,6 +170,8 @@ Navigation menu
   border: 1px solid white;
   border-radius: 15px;
   padding: 0px 7px;
+  background-color: white;
+  color: black;
 }
 
 .spotlessnav  li a:hover {
@@ -190,4 +195,101 @@ Navigation menu
   /*border: 2px solid white;*/
   background-color: white;
   color: red;
+}
+
+
+.spotlessbutton {
+  /*padding: 20px 40px;*/
+  font-family: 'Passion One', cursive;
+  font-size: 20px;
+  border-radius: 0px;
+  margin-right: 10px;
+  color: purple;
+  text-transform: uppercase;
+  
+}
+
+.headline {
+  font-family: 'Passion One', cursive;
+  text-align: left;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: rgba(0,0,0,0);
+    border-top: none;
+    border-bottom: none;
+    /*border-radius: 20px;*/
+    margin: 10px 0px 0px 0px;
+    font-family: 'Passion One', cursive;
+    text-transform: lowercase;
+    font-size: 20px;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    background-color: red;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: red;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border: 4px solid red;
+
+    /*border: none;*/
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: white;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: red;
+    height: 3px;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
 }

@@ -33,16 +33,19 @@
 
   <body>
   
-  <nav class="navbar" role="navigation"> 
-      <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> 
-      <span class="sr-only">Toggle navigation</span> 
-      <span class="icon-bar"></span> 
-      <span class="icon-bar"></span> 
-      <span class="icon-bar"></span> 
-    </button> 
-        <a class="navbar-brand" href="#"></a> 
-    </div> 
-                <?php get_sidebar(); ?> 
-
-</nav>
+   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/inc/img/twitter.png" height="40px">
+                <img src="<?php bloginfo('template_url'); ?>/inc/img/facebook.jpg" height="40px">
+                <img src="<?php bloginfo('template_url'); ?>/inc/img/imgres.png" height="40px"></a>
+        </div>
+        <?php get_sidebar(); ?>
+    </div>
+</div>
