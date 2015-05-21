@@ -8,10 +8,10 @@
 					<div class="col-md-6">
 						<div class="headline">
 			               	<!-- <h1>Welcome to our Company</h1> -->
-								<h1>hiya.<br/>the <span class="sl">spotless leopard</span> is a food truck serving vegan goodness to the people of bristol. we also have regular pop-up restaurants at various locations across the city. </br>come and find us =]</h1>
+								<h1>hiya.<br/>the <span class="sl">spotless leopard</span> is a food truck serving vegan goodness to the people of bristol. we also have regular pop-up restaurants at various locations across the city.</br>come and find us =]</h1>
 								<p>
 								<button type="button" class="btn btn-default btn-lg spotlessbutton">Pop-up Reservations</button>
-								<button type="button" class="btn btn-default btn-lg spotlessbutton">Find the van</button></p>
+								<button type="button" class="btn btn-default btn-lg spotlessbutton spotlessbutton_map">Find the van</button></p>
 
 			            </div>
 

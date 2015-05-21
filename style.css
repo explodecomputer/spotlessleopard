@@ -31,6 +31,9 @@ Video background
 
 */
 
+body {
+  background-color: white;
+}
 
 .homepage-hero-module {
   border-right: none;
@@ -73,7 +76,7 @@ Video background
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 45%;
+  top: 25%;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -131,18 +134,29 @@ Navigation menu
   /*padding: 20px 40px;*/
   font-family: 'Passion One', cursive;
   font-size: 25px;
-  border-radius: 0px;
+  border-radius: 5px;
   margin-right: 10px;
-  color: white;
-  background-color: purple;
+  margin-bottom: 10px;
+  color: #031634;
+  background-color: #E8DDCB;
   border: none;
   text-transform: uppercase;
+}
 
+.spotlessbutton_map {
+  background-color: red;
+  color: white;
 }
 
 .headline {
   font-family: 'Passion One', cursive;
   text-align: left;
+}
+
+.headline h1 {
+  line-height: 120%;
+  /*letter-spacing: 180%;*/
+
 }
 
 /* navbar */
@@ -167,7 +181,7 @@ Navigation menu
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
-    color: red;
+    color: #031634;
     /*background-color: red;*/
 }
 .navbar-default .navbar-nav > li > a:hover,
@@ -208,7 +222,7 @@ Navigation menu
     background-color: red;
     border-radius: 25px;
     height: 50px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-right: 20px;
 
     /*border: none;*/
@@ -248,9 +262,9 @@ Navigation menu
 
 
 .sl {
-  border: 1px solid white;
+  border: 5px dotted white;
   border-radius: 15px;
   padding: 0px 7px;
-  background-color: white;
-  color: black;
+  /*background-color: white;*/
+  color: white;
 }
