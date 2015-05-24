@@ -11,3 +11,9 @@ navbar: http://code.tutsplus.com/tutorials/how-to-integrate-bootstrap-navbar-int
 
 background vid
 http://jsfiddle.net/mgmilcher/8R7Xx/sho/
+
+Google calendar events 
+http://spunmonkey.design/display-contents-google-calendar-php/
+
+Event Management
+http://www.tribalcafe.co.uk/5-best-event-management-plugins-wordpress/
