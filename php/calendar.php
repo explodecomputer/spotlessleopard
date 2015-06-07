@@ -95,8 +95,13 @@ function openOrClosed($regular){
 		}	
 		$status = strtotime($regular[$i]->start->dateTime) - strtotime($now);
 	}
+
+	
+
 	return $status;
 }
+
+
 
 
 function displayRegular($regular, $calTimeZone)

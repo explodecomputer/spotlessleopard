@@ -7,9 +7,9 @@
 	 			<div class="row">
 					<div class="col-md-6">
 						<div class="headline">
-			               	<!-- <h1>Welcome to our Company</h1> -->
 								<div>
-								<h2>hiya.<br/>the <span class="sl">spotless leopard</span> is a food truck serving vegan goodness to the people of bristol. we also have regular pop-up restaurants at various locations across the city.</br>come and find us =]</h1></div>
+								
+								<!-- <h2>hiya.<br/>the <span class="sl">spotless leopard</span> is a food truck serving vegan goodness to the people of bristol. we also have regular pop-up restaurants at various locations across the city.</br>come and find us =]</h2> --></div>
 								<p>
 								
 								</p>
@@ -29,53 +29,77 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 text-left">
-						<button type="button" class="btn btn-default btn-lg spotlessbutton">Pop-up Reservations</button>
+					<div class="col-md-4 text-center">
+						
 					</div>
-					<div class="col-md-8 text-left">
-						<!-- <p>The next pop-up will be on 8th March 2015</p> -->
+					<div class="col-md-4 text-center">
+						<img style="padding-bottom: 10px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="300"><br/>
+						
+						
+						
+					</div>
+				</div>
+				<div class="row smallbuff">
+					<div class="col-md-3 text-right">
+						
+					</div>
+					<div class="col-md-3 text-center">
+						<button type="button" class="btn btn-block btn-default btn-lg spotlessbutton">Pop-up Reservations</button>
+					</div>
+					<div class="col-md-6 text-left">
+						<p class="reservations">The next pop-up will be on Saturday 3rd July 2015</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 text-left">
-						<button type="button" class="btn btn-default btn-lg spotlessbutton spotlessbutton_map">Find the van</button>								
+					<div class="col-md-3 text-center"></div>
+					<div class="col-md-3 text-center">
+						<button type="button" class="btn btn-block btn-default btn-lg spotlessbutton spotlessbutton_map">Find the van</button>								
 					</div>
-					<div class="col-md-8 text-left">
-						<!-- <p>We are currently open</p> -->
+					<div class="col-md-4 text-left">
+						<p class="findthevan">We are currently <b>open</b>!</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 text-left">
-														<a id="replayBtn" href="#"><img style="padding-bottom: 10px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="30" width="30"></a>
+					<div class="col-md-4 text-center">
+
+					</div>
+					<div class="col-md-4 text-center">
+						<a id="replayBtn" href="#"><img style="margin-top: 30px;padding-bottom: 10px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="30" width="30"></a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="filter"></div>
 		<video autoplay preload muted class="fillWidth" id="bigvideo">
-			<source src="<?php bloginfo('template_url'); ?>/inc/video/spotlesscake5.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			<source src="<?php bloginfo('template_url'); ?>/inc/video/spotlesscake6.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
 		</video>
 		<div class="poster hidden">
 			<img src="http://www.videojs.com/img/poster.jpg" alt="">
 		</div>
 	</div>
 </div>
+
+
 <div class="container" id="content">
-	<!-- Example row of columns -->
-	<div class="row">
-		<div class="col-md-3">
-		</div>
-		<div class="col-md-6 welcome">
+<!-- 	<div class="row">
+		<div class="col-md-12 welcome text-center">
 			<h1>healthy &middot; ethical &middot; delicious</h1>
 		</div>
-		<div class="col-md-3">
-			<!-- <p><button type="button" class="btn btn-default btn-lg">Next pop-up</button></p> -->
-			<!-- <p><button type="button" class="btn btn-default btn-lg">Find the van</button></p> -->
-
+	</div>
+ -->
+	<div class="row">
+		<div class="col-md-2 welcome text-center">
+		</div>
+		<div class="col-md-8 welcome text-center">
+			<?php if ( have_posts() ) : while( have_posts() ) : the_post();
+				the_content();
+			endwhile; endif; ?>
+		</div>
+		<div class="col-md-2 welcome text-center">
 		</div>
 	</div>
-</div>
 
+</div>
 
 
 <?php get_footer(); ?>

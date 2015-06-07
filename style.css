@@ -37,8 +37,17 @@ html,body {
 }
 
 body {
-  background-color: #CDD7B6;
+  /*background-color: #FBEFD5;*/
 }
+
+#about {
+  background-color: red;
+}
+
+#menu {
+  background-color: #221C28;
+}
+
 
 p {
   font-family: 'Raleway', sans-serif;
@@ -65,10 +74,10 @@ td {
   border-right: none;
   border-left: none;
   position: relative;
-  border-right: solid #CDD7B6 10px;
-  border-left: solid #CDD7B6 10px;
-  border-bottom: solid #CDD7B6 10px;
-  /*border-top: solid white 10px;*/
+  border-right: solid white 10px;
+  border-left: solid white 10px;
+  border-bottom: solid white 10px;
+  border-top: solid white 10px;
 
 }
 .no-video .video-container video,
@@ -102,7 +111,7 @@ td {
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 25%;
+  top: 35%;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -143,8 +152,9 @@ Navigation menu
 .buff {
   padding-top: 70px;
 }
+
 .welcome {
-  margin-top: 30%;
+  /*margin-top: 30%;*/
 }
 
 .welcome-button {
@@ -155,8 +165,8 @@ Navigation menu
 
 .welcome h1 {
 
-  /*font-family: 'Passion One', cursive;*/
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Passion One', cursive;
+  /*font-family: 'Raleway', sans-serif;*/
 
 }
 
@@ -165,19 +175,21 @@ Navigation menu
   /*padding: 20px 40px;*/
   /*font-family: 'Passion One', cursive;*/
   /*font-family: 'Lobster', cursive;*/
-  font-family: 'Delius Unicase', cursive;
+  /*font-family: 'Delius Unicase', cursive;*/
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Oswald', sans-serif;
   font-size: 20px;
-  border-radius: 5px;
+  border-radius: 0px;
   margin-right: 10px;
   margin-bottom: 10px;
-  color: #031634;
-  background-color: #E8DDCB;
-  border: none;
-  /*text-transform: uppercase;*/
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid white;
+  text-transform: uppercase;
 }
 
 .spotlessbutton_map {
-  background-color: red;
+  /*background-color: red;*/
   color: white;
 }
 
@@ -191,7 +203,18 @@ Navigation menu
   line-height: 120%;
   font-size: 35px;
   /*letter-spacing: 180%;*/
+}
 
+.smallbuff {
+  padding-top: 30px;
+}
+.reservations, .findthevan {
+  padding-top: 7px;
+  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Oswald', sans-serif;*/
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
 }
 
 /* navbar */
@@ -297,7 +320,7 @@ Navigation menu
   /*padding-bottom: 30px;*/
   /*margin-top: 0px;*/
   /*top: 0px;*/
-  margin-left: 0px;
+  margin-left: 20px;
 }
 
 .smiconimg {
@@ -355,4 +378,34 @@ Navigation menu
   border-radius: 0px 30px 30px 0px;
   padding: 5px;
 */  font-size: 14px;
+}
+
+.tabletime {
+  font-family: 'Passion One', cursive;
+}
+
+
+
+.menujumbo {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/swirls2.jpg);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.menujumbo h1 {
+  margin-top: 160px;
+  font-family: 'Lora', serif;
+  font-size: 180px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.menuwords > p {
+  font-size: 34px;
+  color: white;
 }

@@ -11,9 +11,9 @@
 			</button>
 			<span class="smicons">
 				<a href="<?php echo get_option('home'); ?>"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-12.png" height="30px"></a>
-				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/twitter-01.png" height="30px"></a>
-				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/facebook-01.png" height="30px"></a>
-				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/instagram-01.png" height="30px"></a>
+				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/twitter-02.png" height="30px"></a>
+				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/facebook-02.png" height="30px"></a>
+				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/instagram-02.png" height="30px"></a>
 				
 			</span>
 		</div>

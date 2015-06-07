@@ -34,3 +34,9 @@ http://www.tribalcafe.co.uk/5-best-event-management-plugins-wordpress/
 
 
 Directions for map
+
+
+http://www.flaticon.com/free-icon/map-pin-silhouette_8753
+
+https://github.com/brunob/leaflet.fullscreen
+

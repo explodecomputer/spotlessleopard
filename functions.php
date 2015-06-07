@@ -7,4 +7,10 @@ if ( function_exists( 'register_nav_menus' ) ) {
   		)
   	);
 }
+
+if ( ! isset( $content_width ) )
+    $content_width = 1800;
+
+add_filter('show_admin_bar', '__return_false');
+
 ?>
