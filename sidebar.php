@@ -10,10 +10,11 @@
 				<span class="icon-bar"></span>
 			</button>
 			<span class="smicons">
+				<a href="<?php echo get_option('home'); ?>"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-12.png" height="30px"></a>
 				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/twitter-01.png" height="30px"></a>
 				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/facebook-01.png" height="30px"></a>
 				<a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/instagram-01.png" height="30px"></a>
-				<!-- <a href="#"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/logoblack-01.png" height="50px"></a> -->
+				
 			</span>
 		</div>
 		<?php wp_nav_menu(array( 'sort_column' => 'menu_order', 'container_class' => 'navbar-collapse collapse', 'menu_class' => 'nav navbar-nav pull-right')); ?>

@@ -19,6 +19,15 @@ $( document ).ready(function() {
 
 });
 
+var curVid = document.getElementById('bigvideo');
+
+$(document).on('click','#replayBtn',function(){
+    curVid.pause();
+    curVid.currentTime = '0';
+    curVid.play();
+});
+
+
 /** Reusable Functions **/
 /********************************************************************/
 
