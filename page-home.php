@@ -9,7 +9,7 @@
 	 			<div class="row">
 					<div class="col-md-6">
 						<div class="headline">
-							<h2>hiya.<br/>we are an artisan food truck serving vegan goodness to the people of bristol. <a id="replayBtn" href="#"><img src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="20" width="20"></a></h2>
+							<h2>hiya.<br/>we are an artisan* food truck serving vegan goodness to the people of bristol. <a id="replayBtn" href="#"><img src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="20" width="20"></a></h2>
 						</div>
 					</div>
 				</div>
@@ -20,7 +20,7 @@
 
 					</div>
 					<div class="col-md-2">
-						<img src="<?php bloginfo('template_url'); ?>/inc/img/ai/stamplogo.png" height="170">
+						<img src="<?php bloginfo('template_url'); ?>/inc/img/ai/stamplogo.png" height="150">
 					</div>
 				</div>
 
@@ -70,9 +70,7 @@
 		</div>
 	</div>
 </div>
-
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 	the_content();
 endwhile; endif; ?>
-
 <?php get_footer(); ?>

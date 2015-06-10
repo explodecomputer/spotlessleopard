@@ -43,7 +43,7 @@
 
 </head>
 
-<body id="<?php echo $pagename; ?>">
+<body class="<?php echo $pagename; ?>">
 <div id="startchange"></div>
 
 <?php get_sidebar(); ?>
