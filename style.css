@@ -41,13 +41,24 @@ body {
 }
 
 #about {
-  background-color: red;
+  /*background-color: red;*/
 }
 
 #menu {
   background-color: #221C28;
 }
 
+#location {
+  background-color: #F3FAE2;
+}
+
+#pop-ups {
+  background-color: #F7E7B2;
+}
+
+#partners {
+  background-color: #DA770B;
+}
 
 p {
   font-family: 'Raleway', sans-serif;
@@ -74,11 +85,11 @@ td {
   border-right: none;
   border-left: none;
   position: relative;
-  border-right: solid white 10px;
+/*  border-right: solid white 10px;
   border-left: solid white 10px;
   border-bottom: solid white 10px;
   border-top: solid white 10px;
-
+*/
 }
 .no-video .video-container video,
 .touch .video-container video {
@@ -111,7 +122,7 @@ td {
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 35%;
+  top: 29%;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -183,7 +194,10 @@ Navigation menu
   margin-right: 10px;
   margin-bottom: 10px;
   color: white;
-  background-color: rgba(0,0,0,0);
+  /*background-color: rgba(90,90,90,0.5);*/
+  background-image: url(inc/img/dark_embroidery.png);
+  background-repeat: repeat;
+  background-position: 0% 25%;
   border: 1px solid white;
   text-transform: uppercase;
 }
@@ -210,11 +224,14 @@ Navigation menu
 }
 .reservations, .findthevan {
   padding-top: 7px;
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
   /*font-family: 'Oswald', sans-serif;*/
-  font-size: 20px;
-  color: white;
-  text-transform: uppercase;
+  /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Quattrocento', serif;
+  font-size: 16px;
+  color: orange;
+  /*text-transform: uppercase;*/
 }
 
 /* navbar */
@@ -222,9 +239,10 @@ Navigation menu
     background-color: rgba(255,255,255,0);
     /*background-color: white;*/
     border-top: none;
-    border-bottom: none;
+    border-bottom: grey 1px solid;
     /*border-radius: 20px;*/
-    margin: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
     /*font-family: 'Passion One', cursive;*/
     /*font-family: 'Lobster', cursive;*/
     /*font-family: 'Delius Unicase', cursive;*/
@@ -384,7 +402,38 @@ Navigation menu
   font-family: 'Passion One', cursive;
 }
 
+.footerjumbo {
+  margin: 0px;
+  /*height: 100%;*/
+  vertical-align: middle;
+  /*background-color: transparent;  */
+  /*bottom: 0px;*/
+  padding: 0px;
+  margin-top: 60px;
+  border-top: 1px solid black;
+  background-image: url(inc/img/dark_wood.png);
+  background-repeat: repeat;
+  background-position: 0% 25%;
+}
 
+
+.footerjumbo h3 {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.footerjumbo p {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 14px;
+  color: #eee;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 .menujumbo {
   /*margin-bottom: 0px;*/
@@ -394,18 +443,113 @@ Navigation menu
   background-position: 0% 25%;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0px;
   color: white;
 }
 
-.menujumbo h1 {
+.popupjumbo {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/reuben.png);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  color: white;
+}
+
+.partnersjumbo {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/img_1112.jpg);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  color: white;
+}
+
+.menujumbo h1, .popupjumbo h1, .partnersjumbo h1 {
   margin-top: 160px;
   font-family: 'Lora', serif;
-  font-size: 180px;
+  font-size: 100px;
   margin-left: 0px;
   padding-left: 0px;
+}
+
+#location h1, #location p {
+  color: #660066;
+}
+
+#pop-ups h1, #pop-ups p {
+  color: #1784A4;
+}
+
+.bigtitle > h1, .bigtitle, .bigtitle h1, h1 .bigtitle {
+  color: white;
+}
+
+.partnersjumbo h1 {
+  color: #fff;
+}
+
+#partners p {
+  color: white;
+}
+
+
+.homepage h2 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.homepage p {
+  font-family: 'Quattrocento', serif;
+  font-size: 16px;
+}
+
+.homepageblurb p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+
+.partnertext {
+  /*background-color: white;*/
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .menuwords > p {
   font-size: 34px;
   color: white;
+}
+
+.menutext1 {
+  background-color: #031634;
+  padding: 30px;
+  margin: 0px;
+}
+
+.menutext2 {
+  background-color: #CDB380;
+  padding: 30px;
+  margin: 0px;
+}
+
+.menutext3 {
+  background-color: #033649;
+  padding: 30px;
+  margin: 0px;
+}
+
+
+h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  /*text-transform: uppercase;*/
 }

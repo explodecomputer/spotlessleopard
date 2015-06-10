@@ -42,7 +42,8 @@ var myIcon = L.icon({
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     // attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
-    id: 'explodecomputer.l21agb97',
+    // id: 'explodecomputer.l21agb97',
+    id: 'explodecomputer.md6kdnpo',
     accessToken: 'pk.eyJ1IjoiZXhwbG9kZWNvbXB1dGVyIiwiYSI6Ii1QRDlDbDgifQ.wX73a_KCDJ3T2bMtrUt2uA'
 }).addTo(map);
 
