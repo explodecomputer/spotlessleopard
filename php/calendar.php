@@ -65,6 +65,37 @@ function getCategories($appointments, $pattern){
 
 
 
+function getDay($timestamp)
+{
+	$today = new DateTime(); // This object represents current date/time
+	$today->setTime( 0, 0, 0 ); // reset time part, to prevent partial comparison
+	// 2015-06-13T10:00:00+01:00
+	$match_date = DateTime::createFromFormat( "Y-m-dH:i:sO", str_replace('T', '', $timestamp ));
+	$match_date->setTime( 0, 0, 0 ); // reset time part, to prevent partial comparison
+
+	$diff = $today->diff( $match_date );
+	$diffDays = (integer)$diff->format( "%R%a" ); // Extract days count in interval
+
+	switch( $diffDays ) {
+	    case 0:
+	        $day = "Today";
+	        break;
+	    case -1:
+	        $day = "Yesterday";
+	        break;
+	    case +1:
+	        $day = "Tomorrow";
+	        break;
+	    default:
+	        $day = "Sometime";
+	}
+
+	return $day;
+}
+
+
+
+
 // Find if open or closed
 // if closed then return the number of seconds until open
 function openOrClosed($regular){
@@ -74,7 +105,7 @@ function openOrClosed($regular){
 	{
 		if ((strtotime($now) > strtotime($event->start->dateTime)) && (strtotime($now) < strtotime($event->end->dateTime)))
 		{
-			$status = 'open';
+			$status = 'We are currently open until'.' '.date("g.ia", strtotime($event->end->dateTime));
 		}
 	}
 
@@ -90,18 +121,18 @@ function openOrClosed($regular){
 			{
 				break;
 			} else {
+				// echo $event->start->dateTime;
 				$i = $i + 1;
 			}
 		}	
-		$status = strtotime($regular[$i]->start->dateTime) - strtotime($now);
+		// $status = strtotime($regular[$i]->start->dateTime) - strtotime($now);
+		// $status = get_class($status);
+		$status = 'We will be serving '.getDay($regular[8]->start->dateTime).' from '.date("g.ia", strtotime($event->start->dateTime));
+		// $status = $i;
+		// $status = $regular[$i]->start->dateTime;
 	}
-
-	
-
 	return $status;
 }
-
-
 
 
 function displayRegular($regular, $calTimeZone)
@@ -153,13 +184,18 @@ function displayRegular($regular, $calTimeZone)
 }
 
 
-function displayEvents($regular, $calTimeZone)
+function displayEvents($regular, $calTimeZone, $nevents, $divclass)
 {
-
+	$i=0;
 	foreach ($regular as $event) {
+		if($i == $nevents)
+		{
+			break;
+		} else {
+			$i = $i + 1;
+		}
 
 		//Convert date to month and day
-
 		$eventDateStr = $event->start->dateTime;
 		if(empty($eventDateStr))
 		{
@@ -193,21 +229,77 @@ function displayEvents($regular, $calTimeZone)
 		$newth = $eventdate->format("S");
 		//CONVERT REGULAR EVENT DATE TO LEGIBLE DAY
 
-		?>
-<div>
-	<div>
-		<p>
-		</p>
-		 
-	</div>
-	<div>
+		if(isset($divclass)){?> 
+		<div class="<?php echo $divclass; ?>"> <?} else {?>
+		<div><?}?>
 		<p><a href="javascript:void(0);" onclick="newPosition(<?php echo $event->location; ?>);"><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2.png" height="20" width="20"><?php echo $event->summary; ?></a><br/>
 		<span class="timeint"><?php echo $timeinterval; ?></span> <span class="wday"><?php echo $newwday; ?> <?php echo $newday; ?><?php echo $newth; ?> <?php echo $newmonth; ?></span><br/>
 		<?php echo $event->description; ?><br/><br/></p>
 	</div>
-</div>
 	<?php
 	}
+}
+
+
+
+function displayOpenings($regular, $calTimeZone, $nevents, $divclass)
+{
+	if(isset($divclass)) {?>
+	<table class="<? echo $divclass; ?>">
+	<? } else { ?> 
+	<table>
+	<? }
+
+	$i=0;
+	foreach ($regular as $event) {
+		if($i == $nevents)
+		{
+			break;
+		} else {
+			$i = $i + 1;
+		}
+
+		//Convert date to month and day
+		$eventDateStr = $event->start->dateTime;
+		if(empty($eventDateStr))
+		{
+			// it's an all day event
+			$eventDateStr = $event->start->date;
+			$timeinterval = "All day";
+		} else {
+			$stime = date("g.ia", strtotime($eventDateStr));
+			$etime = date("g.ia", strtotime($event->end->dateTime));
+			$timeinterval = $stime."-".$etime;
+		}
+
+		$temp_timezone = $event->start->timeZone;
+		//THIS OVERRIDES THE CALENDAR TIMEZONE IF THE EVENT HAS A SPECIAL TZ
+		if (!empty($temp_timezone)) {
+		$timezone = new DateTimeZone($temp_timezone); //GET THE TIME ZONE
+		 //Set your default timezone in case your events don't have one
+		} else { 
+			$timezone = new DateTimeZone($calTimeZone);
+		}
+		$eventlocation = $event->location;
+		$eventdate = new DateTime($eventDateStr,$timezone);
+		$link = $event->htmlLink;
+		$TZlink = $link . "&ctz=" . $calTimeZone; 
+		//ADD TZ TO EVENT LINK
+		//PREVENTS GOOGLE FROM DISPLAYING EVERYTHING IN GMT
+		$newmonth = $eventdate->format("F");
+		//CONVERT REGULAR EVENT DATE TO LEGIBLE MONTH
+		$newday = $eventdate->format("j");
+		$newwday = $eventdate->format("l");
+		$newth = $eventdate->format("S");
+		//CONVERT REGULAR EVENT DATE TO LEGIBLE DAY
+		?>
+		<tr><td class="timeint"><?php echo $timeinterval; ?></td> <td class="wday"><?php echo $newwday; ?> <?php echo $newday; ?><?php echo $newth; ?> <?php echo $newmonth; ?></td></tr>
+	</div>
+	<?php
+	}
+	?>
+	</table>
+	<?
 }
 
 
@@ -222,4 +314,6 @@ $regular = $temp[0];
 $events = $temp[1];
 // echo openOrClosed($regular)."<br/>";
 
+
 ?>
+

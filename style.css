@@ -410,8 +410,9 @@ Navigation menu
   /*bottom: 0px;*/
   padding: 0px;
   margin-top: 60px;
-  border-top: 1px solid black;
-  background-image: url(inc/img/wildtextures-wooden-chopping-board-texture-2.jpg);
+  /*border-top: 1px solid black;*/
+  /*background-image: url(inc/img/wildtextures-wooden-chopping-board-texture-2.jpg);*/
+  background-image: url(inc/img/N19-2_CleanChoppingBoard.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 25%;

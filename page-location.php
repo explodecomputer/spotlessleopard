@@ -50,7 +50,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 
 var marker = L.marker([51.463539, -2.609762], {icon: myIcon, win_url: "http://google.com"}).addTo(map);
-marker.bindPopup("We are currently <b><?php echo openOrClosed($regular); ?></b>").openPopup();
+marker.bindPopup("<b><?php echo openOrClosed($regular); ?></b>").openPopup();
 marker.on('click', onClick);
 function onClick(e) {
         //console.log(this.options.win_url);
@@ -81,6 +81,8 @@ function onClick(e) {
      the_content();
 endwhile; endif; ?>
 
+		<?php displayOpenings($regular, $calTimeZone, 7, "hello"); ?>
+
 			<!-- 
 			<?php displayRegular($regular, $calTimeZone); ?> -->
 
@@ -88,7 +90,7 @@ endwhile; endif; ?>
 		</div>
 		<div class="col-md-8 text-center">
 			<h1>Special events</h1>
-			<?php displayEvents($events, $calTimeZone); ?>
+			<?php displayEvents($events, $calTimeZone, 100, "hello"); ?>
 		</div>
 	</div>
 </div>
