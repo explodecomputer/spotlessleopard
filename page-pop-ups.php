@@ -24,10 +24,27 @@
 		</div>
 		<div class="col-md-8 text-center">
 
+			<h1>Upcoming</h1>
+			<?
+			$myposts = get_posts(array(
+				'posts_per_page'=>'100', 
+				'post_status'=>'publish', 
+				'category_name'=>'Pop-up',
+				'meta_key'=>'event_begin',
+				'orderby'=>'meta_value',
+				'order'=>'ASC'));
+			print_popup_list($myposts, '', 1);
+			?>
+			<h1>Previous</h1>
+			<?
+			print_popup_list($myposts, '', -1);
+			?>
+
+<!-- 
 	<?php if ( have_posts() ) : while( have_posts() ) : the_post();
 		the_content();
 	endwhile; endif; ?>
-
+ -->
 		</div>
 	</div>
 </div>

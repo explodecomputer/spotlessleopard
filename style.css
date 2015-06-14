@@ -447,7 +447,7 @@ Navigation menu
 }
 
 
-#footerjumbo a:hover {
+#footerjumbo a {
   border-bottom: 1px dotted #333;
   text-decoration: none;
 }
