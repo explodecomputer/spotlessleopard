@@ -232,7 +232,7 @@ function displayEvents($regular, $calTimeZone, $nevents, $divclass)
 		if(isset($divclass)){?> 
 		<div class="<?php echo $divclass; ?>"> <?} else {?>
 		<div><?}?>
-		<p><a href="javascript:void(0);" onclick="newPosition(<?php echo $event->location; ?>);"><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2.png" height="20" width="20"><?php echo $event->summary; ?></a><br/>
+		<p><a href="javascript:void(0);" onclick="newPositionEvent(<?php echo $event->location; ?>, '<?php echo $event->summary; ?> at <?php echo $timeinterval; ?>');"><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2.png" height="20" width="20"><?php echo $event->summary; ?></a><br/>
 		<span class="timeint"><?php echo $timeinterval; ?></span> <span class="wday"><?php echo $newwday; ?> <?php echo $newday; ?><?php echo $newth; ?> <?php echo $newmonth; ?></span><br/>
 		<?php echo $event->description; ?><br/><br/></p>
 	</div>
@@ -312,8 +312,8 @@ date_default_timezone_set($calTimeZone);
 $temp = getCategories($appointments, 'Regular spot');
 $regular = $temp[0];
 $events = $temp[1];
-// echo openOrClosed($regular)."<br/>";
-
+global $opentext;
+$opentext = openOrClosed($regular);
 
 ?>
 

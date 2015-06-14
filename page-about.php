@@ -19,4 +19,34 @@
 	the_content();
 endwhile; endif; ?>
 
+
+<?php
+/*
+Template Name: All posts
+*/
+?>
+
+<?php get_header(); ?>
+
+
+<div>
+<?
+
+$myposts = get_posts(array(
+	'posts_per_page'=>'100', 
+	'post_status'=>'publish', 
+	'category_name'=>'Pop-up',
+	'meta_key'=>'event_begin',
+	'orderby'=>'meta_value',
+	'order'=>'ASC'));
+echo get_next_popup($myposts);
+
+?>
+
+
+</div>
+
+
+
+
 <?php get_footer(); ?>

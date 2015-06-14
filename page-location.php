@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php include('php/calendar.php');?>
 
 <div class="jumbotron">
 <div id="map"></div>
@@ -11,11 +10,31 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/Control.FullScreen.js"></script>
 <script>
-function newPosition(description) {
+
+function onClick(e) {
+	//console.log(this.options.win_url);
+	window.open(this.options.win_url);
+}
+
+function googleMapsLink(coords) {
+	link = "https://www.google.co.uk/maps/place/@"+coords[0]+","+coords[1]+",15z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0?hl=en"
+	return link;
+}
+
+function newPositionRegular(coords) {
 	map.removeLayer(marker);
-	marker = L.marker(description, {icon: myIcon}).addTo(map);
-	map.setView(description, 16);
-	marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+	marker = L.marker(coords, {icon: myIcon, win_url: googleMapsLink(coords)}).addTo(map);
+	map.setView(coords, 16);
+	marker.bindPopup("<b>"+"<?php echo $opentext; ?>"+"</b>").openPopup();
+	marker.on('click', onClick);
+}
+
+function newPositionEvent(coords, message) {
+	map.removeLayer(marker);
+	marker = L.marker(coords, {icon: myIcon, win_url: googleMapsLink(coords)}).addTo(map);
+	map.setView(coords, 16);
+	marker.bindPopup("<b>"+message+"</b>").openPopup();
+	marker.on('click', onClick);
 }
 
 var map = L.map('map', {fullscreenControl: false, zoomControl: false}).setView([51.463539, -2.609762], 16);
@@ -47,15 +66,11 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoiZXhwbG9kZWNvbXB1dGVyIiwiYSI6Ii1QRDlDbDgifQ.wX73a_KCDJ3T2bMtrUt2uA'
 }).addTo(map);
 
-
-
-var marker = L.marker([51.463539, -2.609762], {icon: myIcon, win_url: "http://google.com"}).addTo(map);
+coords = [51.463539, -2.609762];
+var marker = L.marker(coords, {icon: myIcon, win_url: googleMapsLink(coords)}).addTo(map);
 marker.bindPopup("<b><?php echo openOrClosed($regular); ?></b>").openPopup();
 marker.on('click', onClick);
-function onClick(e) {
-        //console.log(this.options.win_url);
-        window.open(this.options.win_url);
-    }
+
 </script>
 
 <div class="container">
@@ -81,7 +96,7 @@ function onClick(e) {
      the_content();
 endwhile; endif; ?>
 
-		<?php displayOpenings($regular, $calTimeZone, 7, "hello"); ?>
+		<?php displayOpenings($regular, $calTimeZone, 7, "openingtimes"); ?>
 
 			<!-- 
 			<?php displayRegular($regular, $calTimeZone); ?> -->
@@ -90,7 +105,7 @@ endwhile; endif; ?>
 		</div>
 		<div class="col-md-8 text-center">
 			<h1>Special events</h1>
-			<?php displayEvents($events, $calTimeZone, 100, "hello"); ?>
+			<?php displayEvents($events, $calTimeZone, 100, NULL); ?>
 		</div>
 	</div>
 </div>

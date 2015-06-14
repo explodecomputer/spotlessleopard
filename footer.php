@@ -27,9 +27,18 @@
 			</div>
 			<div class="col-md-2">
 				<h3>Current status</h3>
-				<p><a href="#">Serving on Alma Rd until 4pm today</a></p>
+				<p><a href="#"><?php global $opentext; echo $opentext; ?></a></p>
 				<h3>Next Pop-up</h3>
-				<p><a href="#">Cream tea</a> on Tuesday 13th July 2015</p>
+				<?
+				$myposts = get_posts(array(
+					'posts_per_page'=>'100', 
+					'post_status'=>'publish', 
+					'category_name'=>'Pop-up',
+					'meta_key'=>'event_begin',
+					'orderby'=>'meta_value',
+					'order'=>'ASC'));
+				?>
+				<p><? echo get_next_popup($myposts); ?></p>
 			</div>
 			<div class="col-md-3">
 				<h3>Contact</h3>

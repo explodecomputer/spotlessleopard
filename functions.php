@@ -13,4 +13,7 @@ if ( ! isset( $content_width ) )
 
 add_filter('show_admin_bar', '__return_false');
 
+include('php/calendar.php');
+include('php/popups.php');
+
 ?>
