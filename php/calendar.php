@@ -78,16 +78,16 @@ function getDay($timestamp)
 
 	switch( $diffDays ) {
 	    case 0:
-	        $day = "Today";
+	        $day = "today";
 	        break;
 	    case -1:
-	        $day = "Yesterday";
+	        $day = "yesterday";
 	        break;
 	    case +1:
-	        $day = "Tomorrow";
+	        $day = "tomorrow";
 	        break;
 	    default:
-	        $day = "Sometime";
+	        $day = "on " . $match_date->format('l jS F');
 	}
 
 	return $day;
@@ -106,6 +106,7 @@ function openOrClosed($regular){
 		if ((strtotime($now) > strtotime($event->start->dateTime)) && (strtotime($now) < strtotime($event->end->dateTime)))
 		{
 			$status = 'We are currently open until'.' '.date("g.ia", strtotime($event->end->dateTime));
+			return $status;
 		}
 	}
 
@@ -127,7 +128,7 @@ function openOrClosed($regular){
 		}	
 		// $status = strtotime($regular[$i]->start->dateTime) - strtotime($now);
 		// $status = get_class($status);
-		$status = 'We will be serving '.getDay($regular[8]->start->dateTime).' from '.date("g.ia", strtotime($event->start->dateTime));
+		$status = 'We will be serving again '.getDay($regular[$i]->start->dateTime).' from '.date("g.ia", strtotime($event->start->dateTime));
 		// $status = $i;
 		// $status = $regular[$i]->start->dateTime;
 	}

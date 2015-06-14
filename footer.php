@@ -6,7 +6,7 @@
 		</div> -->
 		<div class="row text-left">
 			<div class="col-md-3 text-center">
-				<img style="padding-top: 50px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/ai/stamplogo.png" width="180" >
+				<a href="<?php echo home_url(); ?>"><img style="padding-top: 50px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/ai/stamplogo.png" width="180" ></a>
 			</div>
 			<div class="col-md-2">
 				<h3>Summary</h3>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="col-md-2">
 				<h3>Current status</h3>
-				<p><a href="#"><?php global $opentext; echo $opentext; ?></a></p>
+				<p><a href="<?php echo home_url(); ?>/index.php/location"><?php global $opentext; echo $opentext; ?></a></p>
 				<h3>Next Pop-up</h3>
 				<?
 				$myposts = get_posts(array(
@@ -44,16 +44,19 @@
 				<h3>Contact</h3>
 				<p>
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Old_typical_phone_64 (1).png" height="15" style="padding-right: 5px;">07930951876<br/>
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/New_email_interface_symbol_of_black_closed_envelope_64 (1).png" height="15" style="padding-right: 5px;"><a href="#">info@thespotlessleopard.co.uk</a><br/>
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/Facebook_logo_64 (1).png" height="15" style="padding-right: 5px;"><a href="#">thespotlessleopard</a><br/>
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/Twitter_Logo_Silhouette_64 (1).png" height="15" style="padding-right: 5px;"><a href="#">@thespotlessleopard</a><br/>
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/Big_Instagram_logo_64 (1).png" height="15" style="padding-right: 5px;"><a href="#">@thespotlessleopard</a><br/>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/New_email_interface_symbol_of_black_closed_envelope_64 (1).png" height="15" style="padding-right: 5px;"><a href="mailto:info@thespotlessleopard.co.uk">info@thespotlessleopard.co.uk</a><br/>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/Facebook_logo_64 (1).png" height="15" style="padding-right: 5px;"><a href="https://www.facebook.com/TheSpotlessLeopardUK">The SpotlessLeopardUK</a><br/>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/Twitter_Logo_Silhouette_64 (1).png" height="15" style="padding-right: 5px;"><a href="https://twitter.com/thespotlessleop">@TheSpotlessLeop</a><br/>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/Big_Instagram_logo_64 (1).png" height="15" style="padding-right: 5px;"><a href="https://instagram.com/thespotlessleopard/">@thespotlessleopard</a><br/>
 				</p>
+				<div id="credits"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> Website created by <a href="http://github.com/explodecomputer">explodecomputer</a></div>
 			</div>
+
 		</div>
 	</div> <!-- /container -->
 	</footer>
 </div>
+
 
 
 

@@ -5,8 +5,8 @@
 	<div class="row">
 		<div class="col-md-2">
 		</div>
-		<div class="col-md-8 text-center bigtitle">
-			<h1 class="bigtitle">[about]</h1>
+		<div class="col-md-8 text-center">
+			<h1>[about]</h1>
 		</div>
 		<div class="col-md-2">
 		</div>
@@ -16,11 +16,8 @@
 </div>
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
-	the_content();
-endwhile; endif; ?>
-
-
-<?php get_header(); ?>
+		the_content();
+	endwhile; endif; ?>
 
 
 <?php get_footer(); ?>

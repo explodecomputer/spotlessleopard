@@ -13,10 +13,8 @@ function bigdate($timestamp, $informat = 'Y-m-d H:i:s')
 	$date = DateTime::createFromFormat($informat, $timestamp);
 	$month = $date->format('M');
 	$day = $date->format('m');
-
-	echo '<div class="col-md-1 bigdate text-center">';
-	echo '<span class="month">' . $month . '</span><br/><span class="bigday">' . $day . '</span>';
-	echo '</div>';
+	$year = $date->format('Y');
+	echo '<p class="month">' . $month . '</p><p class="bigday">' . $day . '</p>' . '<p class="bigyear">' . $year . '</p>';
 }
 
 
@@ -46,7 +44,9 @@ function print_popup_list($myposts, $thisclass='', $future)
 		if(get_sign(strtotime($myvals['event_begin'][0]) - strtotime($now)) == get_sign($future))
 		{
 			echo '<hr class="fuzzy"><div class="row ' . $thisclass . '">';
+			echo '<div class="col-md-1 bigdate text-center">';
 			bigdate($myvals['event_begin'][0]);
+			echo '</div>';
 			echo '<div class="col-md-10 information text-left">';
 			echo '<p class=""><a href="';
 			the_permalink();

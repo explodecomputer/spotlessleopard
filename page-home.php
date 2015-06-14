@@ -15,8 +15,8 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3 text-left">
-						<h3><a style="font-family: 'Oswald'; text-transform: uppercase; color: white;" href=""><img src="<?php bloginfo('template_url'); ?>/inc/img/leaf_64.png" height="30"> Pop-up reservations</a></h3>
-						<h3><a style="font-family: 'Oswald'; text-transform: uppercase; color: white;" href=""><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2white.png" height="30"> Find the van</a></h3>
+						<h3><a style="font-family: 'Oswald'; text-transform: uppercase; color: white;" href="<?php echo home_url(); ?>/index.php/pop-ups"><img src="<?php bloginfo('template_url'); ?>/inc/img/leaf_64.png" height="30"> Pop-up reservations</a></h3>
+						<h3><a style="font-family: 'Oswald'; text-transform: uppercase; color: white;" href="<?php echo home_url(); ?>/index.php/location"><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2white.png" height="30"> Find the van</a></h3>
 
 					</div>
 					<div class="col-md-2">
