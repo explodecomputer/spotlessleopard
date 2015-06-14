@@ -76,32 +76,10 @@ marker.on('click', onClick);
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 text-left buff">
-			
-<!-- 			<p>Find us on <a href="javascript:void(0);" onclick="newPosition([5.463539, -2.609762]);"><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2.png" height="20" width="20">Alma Road</a> in Clifton. The van will be parked near the entrance to Sainsbury's, just on the corner of Whiteladies Road.</p>
-			<hr>
-			<table>
-			<tr><td>Monday:</td><td class="tabletime">Closed</td></tr>
-			<tr><td>Tuesday:</td><td class="tabletime">10am-4pm</td></tr>
-			<tr><td>Wednesday:</td><td class="tabletime">10am-4pm</td></tr>
-			<tr><td>Thursday:</td><td class="tabletime">10am-4pm</td></tr>
-			<tr><td>Friday:</td><td class="tabletime">10am-4pm</td></tr>
-			<tr><td>Saturday:</td><td class="tabletime">10am-4pm</td></tr>
-			<tr><td>Sunday:</td><td class="tabletime">10am-4pm</td></tr>
-			</table>
-			<p>See the full schedule <a href="">here</a>.</p>
-
- -->
-
-<?php if ( have_posts() ) : while( have_posts() ) : the_post();
-     the_content();
-endwhile; endif; ?>
-
-		<?php displayOpenings($regular, $calTimeZone, 7, "openingtimes"); ?>
-
-			<!-- 
-			<?php displayRegular($regular, $calTimeZone); ?> -->
-
-
+			<?php if ( have_posts() ) : while( have_posts() ) : the_post();
+			     the_content();
+			endwhile; endif; ?>
+			<?php displayOpenings($regular, $calTimeZone, 7, "openingtimes"); ?>
 		</div>
 		<div class="col-md-8 text-center">
 			<h1>Special events</h1>

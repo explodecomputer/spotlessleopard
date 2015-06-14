@@ -53,7 +53,9 @@ body {
 }
 
 .pop-ups {
-  background-color: #F7E7B2;
+  /*background-color: #F7E7B2;*/
+  background-color: #F2E9E1;
+
 }
 
 .partners {
@@ -519,7 +521,7 @@ footer {
 }
 
 .pop-ups h1, .pop-ups p {
-  color: #1784A4;
+  color: #490A3D;
 }
 
 .bigtitle > h1, .bigtitle, .bigtitle h1, h1 .bigtitle {
@@ -598,4 +600,55 @@ h5 {
 
 .arrowlink img {
   margin-right: 7px;
+}
+
+.bigdate {
+}
+
+.month {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-bottom: -10px;
+}
+
+.bigday {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+}
+
+.excerpt p {
+  font-family: 'Quattrocento', serif;
+  font-size: 14px;
+  color: black;
+}
+
+hr.fuzzy {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.loccy {
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+}
+
+.readmore {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.nopads {
+  padding-bottom: 0px;
+}
+
+.popupinfo {
+  /*margin-top: 100px;*/
+}
+
+.popupinfo p {
+  font-size: 18px;
 }

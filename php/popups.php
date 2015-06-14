@@ -14,8 +14,9 @@ function bigdate($timestamp, $informat = 'Y-m-d H:i:s')
 	$month = $date->format('M');
 	$day = $date->format('m');
 
-	echo '<div class="bigdate">';
-	echo '<span class="month">' . 
+	echo '<div class="col-md-1 bigdate text-center">';
+	echo '<span class="month">' . $month . '</span><br/><span class="bigday">' . $day . '</span>';
+	echo '</div>';
 }
 
 
@@ -36,7 +37,6 @@ function print_popup_list($myposts, $thisclass='', $future)
 	$count_posts = wp_count_posts();
 	$nextpost = 0;
 	$published_posts = $count_posts->publish;
-	echo '<div class="' . $thisclass . '">';
 	global $post;
 	foreach($myposts as $post) :
 		global $post;
@@ -45,17 +45,23 @@ function print_popup_list($myposts, $thisclass='', $future)
 		$now = date("Y-m-d H:i:s");
 		if(get_sign(strtotime($myvals['event_begin'][0]) - strtotime($now)) == get_sign($future))
 		{
-			
-			
-			echo '<h2 class="' . $thisclass . '"><a href="';
+			echo '<hr class="fuzzy"><div class="row ' . $thisclass . '">';
+			bigdate($myvals['event_begin'][0]);
+			echo '<div class="col-md-10 information text-left">';
+			echo '<p class=""><a href="';
 			the_permalink();
 			echo '">';
 			the_title();
-			echo '</a></h2>';
-			echo '<p class="excerpt">';
+			echo '</a> <span class="loccy"> ' . $myvals['geo_address'][0] . '</span> </p>';
+			echo '<div class="excerpt">';
 			the_excerpt();
-			echo '</p>';
-			echo '<p class="wday">' . human_date($myvals['event_begin'][0], 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date($myvals['event_begin'][0]) . '<br/>' . $myvals['geo_address'][0] . '</p>';
+			echo '<a class="readmore" href="';
+			the_permalink();
+			echo '">Read more</a>';
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
+			// echo '<p class="wday">' . human_date($myvals['event_begin'][0], 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date($myvals['event_begin'][0]) . '<br/>' . $myvals['geo_address'][0] . '</p>';
 		}
 	endforeach;
 	wp_reset_postdata(); 
