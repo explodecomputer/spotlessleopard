@@ -44,7 +44,7 @@ function print_popup_list($myposts, $thisclass='', $future)
 		if(get_sign(strtotime($myvals['event_begin'][0]) - strtotime($now)) == get_sign($future))
 		{
 			echo '<hr class="fuzzy"><div class="row ' . $thisclass . '">';
-			echo '<div class="col-md-1 bigdate text-center">';
+			echo '<div class="col-md-1 bigdate text-left">';
 			bigdate($myvals['event_begin'][0]);
 			echo '</div>';
 			echo '<div class="col-md-10 information text-left">';
