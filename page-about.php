@@ -15,17 +15,11 @@
 </div>
 </div>
 
-<?php if ( have_posts() ) : while( have_posts() ) : the_post();
-		the_content();
-	endwhile; endif; ?>
-
-
-
 
 <div class="container">
 <div class="row buff">
 
-<div class="col-md-2">
+<div class="col-md-4">
 </div>
 
 <div class="col-md-5 stagedirections">
@@ -33,7 +27,7 @@
 </div>
 </div>
 
-<div class="row buff">
+<div class="row smallbuff">
 <div class="col-md-4 text-right popuptitle lwd">
 <h2>Lowly Web Designer:</h2>
 </div>
@@ -148,11 +142,11 @@
 <div class="col-md-4 text-right popuptitle">
 <h2>The spotless leopard in the press</h2>
 </div>
-<div class="col-md-8 leftborder">
-</div>
-</div>
+<div class="col-md-8 leftborder presslinks">
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 	the_content();
 endwhile; endif; ?>
+</div>
+</div>
 </div>
 <?php get_footer(); ?>

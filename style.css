@@ -24,6 +24,19 @@ Imports
 @import url('css/leaflet.css'); 
 
 
+@font-face {
+    font-family: 'romanitalic';
+    src: url('inc/fonts/roman-italic-webfont.eot');
+    src: url('inc/fonts/roman-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('inc/fonts/roman-italic-webfont.woff2') format('woff2'),
+         url('inc/fonts/roman-italic-webfont.woff') format('woff'),
+         url('inc/fonts/roman-italic-webfont.ttf') format('truetype'),
+         url('inc/fonts/roman-italic-webfont.svg#romanitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 
 /*
@@ -698,7 +711,7 @@ hr.fuzzy {
   font-size: 30px;
   padding: 0px;
   margin: 0px;
-  margin-bottom: 0px;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -738,25 +751,35 @@ hr.fuzzy {
 }
 
 .stagedirections p {
-  font-family: 'Quattrocento', serif;
-  font-style: italic;
+  font-family: 'romanitalic', serif;
+  font-size: 16px;
 }
 
 
 .la h2 {
   color: #A2101D;
+  font-size: 20px;
 }
 
 .la p {
   color: #A2101D;
+  font-family: 'Special Elite', cursive;
+  font-size: 16px;
 }
 
 .lwd h2 {
   color: #490A3D;
+  font-size: 20px;
 }
 
 .lwd p {
   color: #490A3D;
+  font-family: 'Special Elite', cursive;
+  font-size: 16px;
 }
 
 
+.presslinks p {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+}
