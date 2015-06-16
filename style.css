@@ -499,13 +499,26 @@ footer {
 
 .eventjumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/choc.JPG);
+  background-image: url(inc/img/_BBK2611.jpg);
   /*background-color: red;*/
   height: 500px;
   background-position: 0% 25%;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px;
+  color: white;
+}
+
+.buntingjumbo {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/van_bunting.jpg);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  margin-top: 70px;
   color: white;
 }
 
@@ -685,7 +698,7 @@ hr.fuzzy {
   font-size: 30px;
   padding: 0px;
   margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   text-transform: uppercase;
 }
 
@@ -694,7 +707,7 @@ hr.fuzzy {
   font-size: 20px;
   padding: 0px;
   margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   text-transform: uppercase;
 }
 
@@ -723,3 +736,27 @@ hr.fuzzy {
   font-family: 'Quattrocento', serif;
   color: grey;
 }
+
+.stagedirections p {
+  font-family: 'Quattrocento', serif;
+  font-style: italic;
+}
+
+
+.la h2 {
+  color: #A2101D;
+}
+
+.la p {
+  color: #A2101D;
+}
+
+.lwd h2 {
+  color: #490A3D;
+}
+
+.lwd p {
+  color: #490A3D;
+}
+
+
