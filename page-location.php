@@ -37,7 +37,17 @@ function newPositionEvent(coords, message) {
 	marker.on('click', onClick);
 }
 
-var map = L.map('map', {fullscreenControl: false, zoomControl: false, dragging: false, tap: false}).setView([51.463539, -2.609762], 16);
+
+mapOptions: 
+
+if(innerWidth < 767)
+{
+	var alloptions = {fullscreenControl: false, zoomControl: false, dragging: false, tap: false};
+} else {
+	var alloptions = {fullscreenControl: false, zoomControl: false};
+}
+
+var map = L.map('map', alloptions).setView([51.463539, -2.609762], 16);
 new L.Control.Zoom({ position: 'bottomleft' }).addTo(map);
 new L.Control.FullScreen({ position: 'bottomleft'}).addTo(map);
 
@@ -49,6 +59,8 @@ map.on('enterFullscreen', function(){
 map.on('exitFullscreen', function(){
 	if(window.console) window.console.log('exitFullscreen');
 });
+
+
 
 var myIcon = L.icon({
     iconUrl: '<?php bloginfo('template_url'); ?>/inc/img/pin2.png',
