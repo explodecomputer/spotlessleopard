@@ -570,6 +570,13 @@ footer {
   padding-left: 0px;
 }
 
+@media (max-width: 767px) {
+  .menujumbo h1, .popupjumbo h1, .partnersjumbo h1, .aboutjumbo h1 {
+    font-size: 50px;
+  }
+}
+
+
 .location h1, .location p {
   color: #660066;
 }
