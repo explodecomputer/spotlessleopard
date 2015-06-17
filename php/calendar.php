@@ -105,7 +105,7 @@ function openOrClosed($regular){
 	{
 		if ((strtotime($now) > strtotime($event->start->dateTime)) && (strtotime($now) < strtotime($event->end->dateTime)))
 		{
-			$status = 'We are currently open until'.' '.date("g.ia", strtotime($event->end->dateTime));
+			$status = 'We are open until ' . date("g.ia", strtotime($event->end->dateTime)) . ' today.';
 			return $status;
 		}
 	}

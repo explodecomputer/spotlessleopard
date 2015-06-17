@@ -36,14 +36,14 @@
 				'posts_per_page'=>'100', 
 				'post_status'=>'publish', 
 				'category_name'=>'Pop-up',
-				'meta_key'=>'event_begin',
+				'meta_key'=>'start_time',
 				'orderby'=>'meta_value',
 				'order'=>'ASC'));
-			print_popup_list($myposts, '', 1);
+			print_popup_list($myposts, '', 1, 1);
 			?>
 			<h1 class="nopads">Previous</h1>
 			<?
-			print_popup_list($myposts, '', -1);
+			print_popup_list($myposts, '', -1, 1);
 			?>
 		</div>
 	</div>

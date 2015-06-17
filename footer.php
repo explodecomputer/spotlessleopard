@@ -5,8 +5,8 @@
 			<img style="padding-bottom: 10px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/ai/stamplogo.png" width="120"><br/>
 		</div> -->
 		<div class="row text-left">
-			<div class="col-md-3 text-center">
-				<a href="<?php echo home_url(); ?>"><img style="padding-top: 50px; padding-right: 10px;"  src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="250" ></a>
+			<div class="col-md-3 text-center" id="footerlogo">
+				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="250" ></a>
 			</div>
 			<div class="col-md-2">
 				<h3>Summary</h3>
@@ -34,7 +34,7 @@
 					'posts_per_page'=>'100', 
 					'post_status'=>'publish', 
 					'category_name'=>'Pop-up',
-					'meta_key'=>'event_begin',
+					'meta_key'=>'start_time',
 					'orderby'=>'meta_value',
 					'order'=>'ASC'));
 				?>

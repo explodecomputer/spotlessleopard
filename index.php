@@ -8,22 +8,22 @@
 
 <div class="container">
 <div class="row buff">
-<div class="col-md-4 text-right popuptitle">
+<div class="col-md-4 text-right popuptitle rightborder">
 
 <h2><? the_title(); ?></h2>
 
 <div>
 	<? 
-	$myvals = get_post_meta(get_the_ID());
-	bigdate($myvals['event_begin'][0]);
+	bigdate(get_field('start_time'));
 	?>
 </div>
-<p class="wday"><? echo human_date($myvals['event_begin'][0], 'Y-m-d H:i:s', 'g:ia'); ?> - <? echo human_date($myvals['event_end'][0], 'Y-m-d H:i:s', 'g:ia'); ?></p>
-<p class="wday"><? echo $myvals['geo_address'][0]; ?></p>
+<p class="wday"><? echo human_date(get_field('start_time'), 'Y-m-d H:i:s', 'g:ia'); ?> - <? echo human_date(get_field('end_time'), 'Y-m-d H:i:s', 'g:ia'); ?></p>
+<p class="wday"><? echo get_field('location'); ?></p>
+<p class="wday"><? echo get_field('price'); ?></p>
 <p class="wday">For bookings contact us at <a href="mailto:info@thespotlessleopard.co.uk">info@thespotlessleopard.co.uk</a></p>
 
 </div>
-<div class="col-md-8 leftborder">
+<div class="col-md-8">
 <? the_content(); ?>
 <? endwhile; endif; ?>
 </div>
@@ -31,16 +31,16 @@
 
 
 <div class="row buff">
-<div class="col-md-4 popuptitle text-right">
+<div class="col-md-4 popuptitle text-right rightborder">
 <h3>All upcoming popups</h3>
 </div>
-<div class="col-md-8 leftborder">
+<div class="col-md-8">
 <?
 	$myposts = get_posts(array(
 		'posts_per_page'=>'100', 
 		'post_status'=>'publish', 
 		'category_name'=>'Pop-up',
-		'meta_key'=>'event_begin',
+		'meta_key'=>'start_time',
 		'orderby'=>'meta_value',
 		'order'=>'ASC'));
 	print_popup_list($myposts, '', 1);

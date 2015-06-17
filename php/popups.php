@@ -12,7 +12,7 @@ function bigdate($timestamp, $informat = 'Y-m-d H:i:s')
 {
 	$date = DateTime::createFromFormat($informat, $timestamp);
 	$month = $date->format('M');
-	$day = $date->format('m');
+	$day = $date->format('d');
 	$year = $date->format('Y');
 	echo '<p class="month">' . $month . '</p><p class="bigday">' . $day . '</p>' . '<p class="bigyear">' . $year . '</p>';
 }
@@ -30,7 +30,7 @@ function get_sign($x)
 }
 
 
-function print_popup_list($myposts, $thisclass='', $future)
+function print_popup_list($myposts, $thisclass='', $future, $concise = 0)
 {
 	$count_posts = wp_count_posts();
 	$nextpost = 0;
@@ -39,29 +39,39 @@ function print_popup_list($myposts, $thisclass='', $future)
 	foreach($myposts as $post) :
 		global $post;
 		setup_postdata($post);
-		$myvals = get_post_meta(get_the_ID());
 		$now = date("Y-m-d H:i:s");
-		if(get_sign(strtotime($myvals['event_begin'][0]) - strtotime($now)) == get_sign($future))
+		if(get_sign(strtotime(get_field('start_time')) - strtotime($now)) == get_sign($future))
 		{
-			echo '<hr class="fuzzy"><div class="row ' . $thisclass . '">';
+			if($concise == 1)
+			{
+				echo '<hr class="fuzzy">';
+			}
+			echo '<div class="row ' . $thisclass . '">';
 			echo '<div class="col-md-1 bigdate text-left">';
-			bigdate($myvals['event_begin'][0]);
+			bigdate(get_field('start_time'));
 			echo '</div>';
 			echo '<div class="col-md-10 information text-left">';
 			echo '<p class=""><a href="';
 			the_permalink();
 			echo '">';
 			the_title();
-			echo '</a> <span class="loccy"> ' . $myvals['geo_address'][0] . '</span> </p>';
-			echo '<div class="excerpt">';
-			the_excerpt();
-			echo '<a class="readmore" href="';
-			the_permalink();
-			echo '">Read more</a>';
+			echo '</a>';
+			if($concise == 0)
+			{
+				echo '<br/>';
+			}
+			echo '<span class="loccy"> ' . get_field('location') . '</span> </p>';
+			if($concise == 1)
+			{
+				echo '<div class="excerpt">';
+				the_excerpt();
+				echo '<a class="readmore" href="';
+				the_permalink();
+				echo '">Read more</a>';
+				echo '</div>';
+			}
 			echo '</div>';
 			echo '</div>';
-			echo '</div>';
-			// echo '<p class="wday">' . human_date($myvals['event_begin'][0], 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date($myvals['event_begin'][0]) . '<br/>' . $myvals['geo_address'][0] . '</p>';
 		}
 	endforeach;
 	wp_reset_postdata(); 
@@ -79,18 +89,17 @@ function get_next_popup($myposts, $thisclass='')
 		global $post;
 		setup_postdata($post);
 		$flag = 0;
-		$myvals = get_post_meta(get_the_ID());
 		$now = date("Y-m-d H:i:s");
-		if($now < $myvals['event_begin'][0])
+		if($now < get_field('start_time'))
 		{
-			// echo strtotime($now) - strtotime($myvals['event_begin'][0]);
+			// echo strtotime($now) - strtotime(get_field('start_time'));
 			$flag = 1;
 			echo '<span class="' . $thisclass . '"><a href="';
 			the_permalink();
 			echo '">';
 			the_title();
 			echo '</a>';
-			echo ' at ' . human_date($myvals['event_begin'][0], 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date($myvals['event_begin'][0]) . '</span>';
+			echo ' at ' . human_date(get_field('start_time'), 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date(get_field('start_time')) . '</span>';
 			break;
 		}
 	endforeach;

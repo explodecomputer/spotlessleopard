@@ -137,7 +137,7 @@ td {
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 29%;
+  top: 25%;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -234,6 +234,55 @@ Navigation menu
   /*letter-spacing: 180%;*/
 }
 
+.headline h4 {
+  line-height: 120%;
+  font-size: 20px;
+  color: grey;
+  text-align: right;
+  line-height: 150%;
+  /*letter-spacing: 180%;*/
+}
+
+.headline a {
+  color: grey;
+  border-bottom: 2px dotted grey;
+}
+
+.headline a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid grey;
+}
+
+a.popupheadline {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase; 
+  color: #CEA82B;
+  padding-left: 35px;
+  background: transparent url(inc/img/leaf_64.png) no-repeat top left;
+  border: none;
+}
+
+a.vanheadline {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase; 
+  color: #CEA82B;
+  padding-left: 35px;
+  background: transparent url(inc/img/pin2white.png) no-repeat top left;
+  border: none;
+}
+
+
+
+@media (max-width: 767px) {
+  .headline h4 {
+    text-align: left;
+    /*padding-left:35px;*/
+    margin-top: 30px;
+  }
+  .video-container .title-container {
+    top: 5%;
+  }
+}
 .smallbuff {
   padding-top: 30px;
 }
@@ -652,7 +701,9 @@ h5 {
 }
 
 
-.arrowlink {
+a.arrowlink {
+  padding-left: 25px;
+  background: transparent url(inc/img/arrow_right_black.png) no-repeat top left;
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
   color: black;
@@ -827,4 +878,9 @@ hr.fuzzy {
 .presslinks p {
   font-family: 'Lora', serif;
   font-size: 15px;
+}
+
+#footerlogo a {
+  text-decoration: none; 
+  border: none;
 }
