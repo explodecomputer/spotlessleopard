@@ -727,7 +727,7 @@ hr.fuzzy {
   font-size: 18px;
 }
 
-.popuptitle h2 {
+.popuptitle h2, .presstitle h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   padding: 0px;
@@ -735,8 +735,13 @@ hr.fuzzy {
   padding-bottom: 10px;
   text-transform: uppercase;
 }
+
+
 @media (max-width: 767px) {
   .popuptitle h3 {
+    text-align: left;
+  }
+  .presstitle h2 {
     text-align: left;
   }
 }

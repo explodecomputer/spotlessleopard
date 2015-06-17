@@ -139,8 +139,8 @@
 
 
 <div class="row buff">
-<div class="col-md-4 text-right popuptitle">
-<h2>The spotless leopard in the press</h2>
+<div class="col-md-4 text-right presstitle">
+<h2>In the press</h2>
 </div>
 <div class="col-md-8 leftborder presslinks">
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
