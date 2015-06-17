@@ -37,7 +37,7 @@ function newPositionEvent(coords, message) {
 	marker.on('click', onClick);
 }
 
-var map = L.map('map', {fullscreenControl: false, zoomControl: false}).setView([51.463539, -2.609762], 16);
+var map = L.map('map', {fullscreenControl: false, zoomControl: false, dragging: false, tap: false}).setView([51.463539, -2.609762], 16);
 new L.Control.Zoom({ position: 'bottomleft' }).addTo(map);
 new L.Control.FullScreen({ position: 'bottomleft'}).addTo(map);
 
