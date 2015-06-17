@@ -327,7 +327,7 @@ Navigation menu
 /* mobile version */
 .navbar-default .navbar-toggle {
     border: 0px solid red;
-    background-color: red;
+    /*background-color: red;*/
     border-radius: 15px;
     height: 30px;
     margin-top: 10px;
@@ -337,11 +337,11 @@ Navigation menu
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: red;
+    background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
-    height: 1px;
+    height: 2px;
 }
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -351,12 +351,11 @@ Navigation menu
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #333;
-        border: none;
+        border: 1px white solid;
     }
     .navbar-default {
       padding-top: 0px;
       padding-bottom: 0px;
-      background-color: #3B4952;
     }
     .navbar-default .navbar-nav > li {
       margin-right: 10px;
@@ -800,6 +799,9 @@ hr.fuzzy {
   }
   .leftborder {
     border: none;
+  }
+  .menublurb p {
+    text-align: left;
   }
 }
 
