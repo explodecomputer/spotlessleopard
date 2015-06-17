@@ -26,8 +26,8 @@ function getCalendar(){
 	$params = array(
 
 		'orderBy' => 'startTime',
-		'singleEvents' => true
-		// // 'timeMin' => date(DateTime::ATOM),//ONLY PULL EVENTS STARTING TODAY
+		'singleEvents' => true,
+		'timeMin' => date(DateTime::ATOM) //ONLY PULL EVENTS STARTING TODAY
 		// 'maxResults' => 7 //ONLY USE THIS IF YOU WANT TO LIMIT THE NUMBER
 		// 			  //OF EVENTS DISPLAYED
 	 
