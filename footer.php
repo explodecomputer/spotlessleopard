@@ -6,7 +6,7 @@
 		</div> -->
 		<div class="row text-left">
 			<div class="col-md-3 text-center" id="footerlogo">
-				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="250" ></a>
+				<!-- <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="250" ></a> -->
 			</div>
 			<div class="col-md-2">
 				<h3>Summary</h3>
