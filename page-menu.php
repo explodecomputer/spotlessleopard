@@ -1,5 +1,40 @@
 <?php get_header(); ?>
 
+<?php 
+
+function menu_gallery($tag)
+{
+	$args = array(
+		'post_type' => 'attachment',
+		'post_mime_type' => 'image',
+		'posts_per_page' => -1,
+		'numberposts' => -1,
+		'post_status' => null,
+	);
+
+	$attachments = get_posts( $args );
+	if ( $attachments ) {
+		foreach ( $attachments as $attachment ) {
+			if(get_field('imagetag', $attachment->ID) == $tag)
+			{
+				echo '<div class="row"><div class="col-md-5">';
+				echo '<a href="' . $attachment->guid . '">';
+				echo wp_get_attachment_image( $attachment->ID, 'medium' );
+				echo '</a></div><div class="col-md-7">';
+				echo '<h2>';
+				echo apply_filters( 'the_title', $attachment->post_title );
+				echo '</h2>';
+				echo '<p>';
+				echo $attachment->post_content;
+				echo '</p></div></div><hr class="fuzzy">';
+			}
+		}
+	}
+}
+
+
+?>
+
 <div class="jumbotron menujumbo">
 <div class="container">
 	<div class="row">
@@ -16,24 +51,21 @@
 </div>
 
 
-
-
 <div class="container">
 <div class="row buff">
 <div class="col-md-4 text-right menublurb rightborder">
-	<p class="wday">We are constantly experimenting and as a consequence we don’t have a set menu. Every day we will serve up three or four options for main meals, different salads, and a few cakes.</p>
-	<p class="wday">We use only the highest quality ingredients. Except for the wraps that we get from Sainsbury’s, we can’t really say that they are the highest quality. But they’re not shit or anything. And we will always have gluten free options available. Well, not always. But mostly. You should eat gluten though, it’s delicious.</p>
-	<p class="wday">Here are some examples of the things we like to serve. Every day is a new adventure! Go vegan motherfucker.</p>
-</div>
-<div class="col-md-8 popuptitle">
-
-
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 		the_content();
 	endwhile; endif; ?>
 
+</div>
+<div class="col-md-8 popuptitle">
+<h1>Mains</h1>
+<? menu_gallery("main"); ?>
 
+<h1>Dessert</h1>
+<? menu_gallery("dessert"); ?>
 
 </div>
 </div>

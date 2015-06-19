@@ -235,16 +235,18 @@ Navigation menu
 }
 
 .headline h4 {
+  font-family: 'Quattrocento', serif;
+  /*text-shadow: 1px 1px rgba(255,255,255, 0.5);*/
   line-height: 120%;
-  font-size: 20px;
-  color: grey;
+  font-size: 16px;
+  color: #ddd;
   text-align: right;
   line-height: 150%;
   /*letter-spacing: 180%;*/
 }
 
 .headline a {
-  color: grey;
+  color: #ddd;
   border-bottom: 2px dotted grey;
 }
 
@@ -273,16 +275,26 @@ a.vanheadline {
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .headline h4 {
-    text-align: left;
+    text-align: center;
     /*padding-left:35px;*/
     margin-top: 30px;
   }
   .video-container .title-container {
-    top: 5%;
+    top: 10%;
+  }
+  .headline {
+    text-align: center;
   }
 }
+
+@media (max-width: 767px) {
+  .video-container .title-container {
+    top: 0%;
+  }
+}
+
 .smallbuff {
   padding-top: 30px;
 }
@@ -310,7 +322,7 @@ a.vanheadline {
     /*font-family: 'Passion One', cursive;*/
     /*font-family: 'Lobster', cursive;*/
     /*font-family: 'Delius Unicase', cursive;*/
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Pontano Sans', sans-serif;
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -392,7 +404,7 @@ a.vanheadline {
     background-color: white;
     height: 2px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #777;
         text-align: center;
@@ -618,7 +630,7 @@ footer {
   padding-left: 0px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .menujumbo h1, .popupjumbo h1, .partnersjumbo h1, .aboutjumbo h1 {
     font-size: 50px;
   }
@@ -787,7 +799,7 @@ hr.fuzzy {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .popuptitle h3 {
     text-align: left;
   }
@@ -841,7 +853,7 @@ hr.fuzzy {
   font-size: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .la h2, .lwd h2 {
     text-align: left;
   }
