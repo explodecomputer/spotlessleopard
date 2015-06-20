@@ -187,6 +187,12 @@ function displayRegular($regular, $calTimeZone)
 
 function displayEvents($regular, $calTimeZone, $nevents, $divclass)
 {
+	if(sizeof($regular) == 0)
+	{
+		?>
+		<p>No upcoming events at the moment. Keep checking back!</p>
+		<?
+	}
 	$i=0;
 	foreach ($regular as $event) {
 		if($i == $nevents)
@@ -233,7 +239,7 @@ function displayEvents($regular, $calTimeZone, $nevents, $divclass)
 		if(isset($divclass)){?> 
 		<div class="<?php echo $divclass; ?>"> <?} else {?>
 		<div><?}?>
-		<p><a href="javascript:void(0);" onclick="newPositionEvent(<?php echo $event->location; ?>, '<?php echo $event->summary; ?> at <?php echo $timeinterval; ?>');"><img src="<?php bloginfo('template_url'); ?>/inc/img/pin2.png" height="20" width="20"><?php echo $event->summary; ?></a><br/>
+		<p><a class="locationpin" href="javascript:void(0);" onclick="newPositionEvent(<?php echo $event->location; ?>, '<?php echo $event->summary; ?> at <?php echo $timeinterval; ?>');"><?php echo $event->summary; ?></a><br/>
 		<span class="timeint"><?php echo $timeinterval; ?></span> <span class="wday"><?php echo $newwday; ?> <?php echo $newday; ?><?php echo $newth; ?> <?php echo $newmonth; ?></span><br/>
 		<?php echo $event->description; ?><br/><br/></p>
 	</div>

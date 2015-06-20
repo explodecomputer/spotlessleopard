@@ -77,7 +77,7 @@
 <h2>LA:</h2>
 </div>
 <div class="col-md-8 leftborder la">
-<p>No, 'we'. Me and the van. Obviously. And my highly esteemed and well renumerated immigrant workers.</p>
+<p>No, 'we'. Me and the van. Obviously. And my highly esteemed and well remunerated immigrant workers.</p>
 </div>
 </div>
 
