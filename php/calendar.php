@@ -21,7 +21,8 @@ function getCalendar(){
 	$client->setApplicationName("Spotless Leopard");
 	$client->setDeveloperKey('AIzaSyDMO5IzHHapmNae_i8pes_cOhE1G2k-SoQ');
 	$cal = new Google_Service_Calendar($client);
-	$calendarId = 'c5lf84fmpd9pj2r0g4dqhk4hnk@group.calendar.google.com';
+	// $calendarId = 'c5lf84fmpd9pj2r0g4dqhk4hnk@group.calendar.google.com';
+	$calendarId = '3l0e1eu5i0kj1uh56mm2d19rkk@group.calendar.google.com';
 
 	$params = array(
 

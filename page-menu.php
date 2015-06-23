@@ -64,7 +64,7 @@ function menu_gallery($tag)
 <h1>Mains</h1>
 <? menu_gallery("main"); ?>
 
-<h1>Dessert</h1>
+<h1>Sweet stuff</h1>
 <? menu_gallery("dessert"); ?>
 
 </div>

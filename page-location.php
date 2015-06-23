@@ -92,26 +92,24 @@ marker.on('click', onClick);
 
 <div class="col-md-6">
 <div class="row">
-<div class="col-md-4"></div>
-<div class="col-md-8 popuptitle">
+<div class="col-md-2"></div>
+<div class="col-md-10 popuptitle text-center">
 	<h2>Regular spot</h2>
-	<div class="locationdirections">
-	<p>Find us on <a href="javascript:void(0);" onclick="newPositionEvent([51.463539, -2.609762], 'Our usual spot');" class="locationpin">Alma Road</a> in Clifton. The van will be parked near Sainsbury's car park, where Alma Road meets Whiteladies Road.</p>
-	</div>
+<?php if ( have_posts() ) : while( have_posts() ) : the_post();
+
+echo the_field('regular_spot');
+
+?>
+
 </div> 
 </div>
 
 <div class="row smallbuff">
 <div class="col-md-4 text-right popuptitle">
 
-<p class="locationinfoblurb">Our regular opening times are:</p>
-<p class="locationinfoblurb2">Monday: closed<br/>
-Tue-Fri: 11am-4pm<br/>
-Saturday: 11am-5pm<br/>
-Sunday: 11am-4pm</p>
-
-<p class="locationinfoblurb">But for various reasons we might not stick to these times religiously. The planned opening times for the next few days are shown here</p>
-
+<?
+	the_content();
+?>
 
 </div>
 <div class="col-md-8 leftborder">
@@ -126,9 +124,11 @@ Sunday: 11am-4pm</p>
 <div class="col-md-2"></div>
 <div class="col-md-10 popuptitle text-center">
 	<h2>Special events</h2>
-	<div class="locationdirections">
-	<p>You might find us in other locations too! We regularly serve at festivals, gigs, and other events. If you'd like us to cater for you then <a href="mailto:info@thespotlessleopard.co.uk">get in touch</a></p>
-	</div>
+
+<? 
+echo the_field('special_events');
+?>
+
 	<div class="smallbuff text-center">
 		<?php displayEvents($events, $calTimeZone, 100, NULL); ?>
 	</div>
@@ -137,6 +137,7 @@ Sunday: 11am-4pm</p>
 
 </div>
 </div>
+<? endwhile; endif; ?>
 
 
 

@@ -3,7 +3,9 @@
 <div class="homepage-hero-module">
 	<div class="video-container">
 		<div class="title-container">
-						<a style="position: absolute; bottom: 10px; right: 10px;" id="replayBtn" href="#"><img src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="30" width="30"></a>
+			<a style="position: absolute; bottom: 10px; right: 10px; z-index: 9999;" id="replayBtn" href="#">
+				<img src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="30" width="30">
+			</a>
 
 			<div class="container">
 

@@ -27,7 +27,7 @@
 			</div>
 			<div class="col-md-2">
 				<h3>Current status</h3>
-				<p><a href="<?php echo home_url(); ?>/index.php/location"><?php global $opentext; echo $opentext; ?></a></p>
+				<p><a href="<?php echo home_url(); ?>/index.php/?page_id=4"><?php global $opentext; echo $opentext; ?></a></p>
 				<h3>Next Pop-up</h3>
 				<?
 				$myposts = get_posts(array(
