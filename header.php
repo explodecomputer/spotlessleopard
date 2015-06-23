@@ -38,7 +38,7 @@
 
 </head>
 
-<body class="<?php echo $pagename; ?>">
+<body class="<?php echo strtolower($wp_query->post->post_title); ?>">
 <div id="startchange"></div>
 
 <?php get_sidebar(); ?>
