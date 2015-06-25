@@ -18,7 +18,10 @@ function menu_gallery($tag)
 			if(get_field('imagetag', $attachment->ID) == $tag)
 			{
 				echo '<div class="row"><div class="col-md-5">';
-				echo '<a href="' . $attachment->guid . '">';
+				echo '<a href="' . $attachment->guid . '" data-lightbox="food" data-title="';
+				echo apply_filters( 'the_title', $attachment->post_title ) . ': ';
+				echo $attachment->post_content;
+				echo '">';
 				echo wp_get_attachment_image( $attachment->ID, 'medium' );
 				echo '</a></div><div class="col-md-7">';
 				echo '<h2>';
