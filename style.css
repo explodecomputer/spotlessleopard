@@ -425,6 +425,8 @@ a.locationpin {
     .navbar-default {
       padding-top: 0px;
       padding-bottom: 0px;
+      background-color: #3B4952;
+      border-bottom: #3B4952 1px solid;
     }
     .navbar-default .navbar-nav > li {
       margin-right: 10px;

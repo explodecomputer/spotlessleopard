@@ -35,6 +35,7 @@ function newPositionEvent(coords, message) {
 	map.setView(coords, 16);
 	marker.bindPopup("<b>"+message+"</b>").openPopup();
 	marker.on('click', onClick);
+	$("html, body").animate({ scrollTop: 0 }, "slow");
 }
 
 

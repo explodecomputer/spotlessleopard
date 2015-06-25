@@ -11,9 +11,9 @@
 			</button>
 			<span class="smicons">
 				<a href="<?php echo get_option('home'); ?>"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-12.png" height="30px"></a>
-				<a href="https://twitter.com/thespotlessleop"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/twitter-02.png" height="30px"></a>
-				<a href="https://www.facebook.com/TheSpotlessLeopardUK"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/facebook-02.png" height="30px"></a>
-				<a href="https://instagram.com/thespotlessleopard/"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/instagram-02.png" height="30px"></a>
+				<a target="_blank" href="https://twitter.com/thespotlessleop"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/twitter-02.png" height="30px"></a>
+				<a target="_blank" href="https://www.facebook.com/TheSpotlessLeopardUK"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/facebook-02.png" height="30px"></a>
+				<a target="_blank" href="https://instagram.com/thespotlessleopard/"><img class="smiconimg" src="<?php bloginfo('template_url'); ?>/inc/img/ai/instagram-02.png" height="30px"></a>
 				
 			</span>
 		</div>

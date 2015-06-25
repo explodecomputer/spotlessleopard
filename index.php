@@ -4,6 +4,7 @@
 
 
 <div class="jumbotron eventjumbo">
+	<a id="photocredit" href="http://twitter.com/brtknr/">Photo credit: Bharat Kunwar</a>
 </div>
 
 <div class="container">
