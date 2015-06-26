@@ -29,7 +29,7 @@ Imports
     font-family: 'romanitalic';
     src: url('inc/fonts/roman-italic-webfont.eot');
     src: url('inc/fonts/roman-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('inc/fonts/roman-italic-webfont.woff2') format('woff2'),
+         url('inc/fonts/roman-itacdlic-webfont.woff2') format('woff2'),
          url('inc/fonts/roman-italic-webfont.woff') format('woff'),
          url('inc/fonts/roman-italic-webfont.ttf') format('truetype'),
          url('inc/fonts/roman-italic-webfont.svg#romanitalic') format('svg');
@@ -73,7 +73,9 @@ body {
 }
 
 .partners {
-  background-color: #DA770B;
+  /*background-color: #DA770B;*/
+  background-image: url(inc/img/classy_fabric/classy_fabric.png);
+  background-repeat: repeat;
 }
 
 p {
@@ -582,7 +584,7 @@ footer {
   background-image: url(inc/img/louiseinvan.jpg);
   /*background-color: red;*/
   height: 500px;
-  background-position: 0% 25%;
+  background-position: 0% 26%;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px;
@@ -686,6 +688,11 @@ footer {
   color: white;
 }
 
+.partners h1 {
+  /*font-family: 'Oswald';*/
+  /*text-transform: uppercase;*/
+  /*color: #DA770B;*/
+}
 
 .homepage h2 {
   font-family: 'Oswald', sans-serif;
