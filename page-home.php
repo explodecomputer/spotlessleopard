@@ -34,7 +34,7 @@
 								<h4><?php global $opentext; echo $opentext; ?></h4>
 							</div>
 							<div class="col-md-6 headline">
-								<h3><a class="vanheadline" href="<?php echo home_url(); ?>/?page_id=4"> Find the van</a></h3>
+								<h3><a class="vanheadline" href="<?php echo home_url(); ?>/location"> Find the van</a></h3>
 							</div>
 						</div>
 						<div class="row">
@@ -42,7 +42,7 @@
 								<h4><? echo get_next_popup($myposts); ?></h4>
 							</div>
 							<div class="col-md-6 headline">
-								<h3><a class="popupheadline" href="<?php echo home_url(); ?>/index.php/?page_id=6">Pop-up reservations</a></h3>
+								<h3><a class="popupheadline" href="<?php echo home_url(); ?>/pop-ups">Pop-up reservations</a></h3>
 							</div>
 						</div>
 					</div>
