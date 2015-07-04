@@ -23,7 +23,14 @@
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 the_content();
 ?>
+</div>
 
+<div class="buff"></div>
+
+<div class="jumbotron vanjumbo">
+</div>
+
+<div class="container">
 
 <div class="row buff">
 <div class="col-md-4 text-right presstitle">

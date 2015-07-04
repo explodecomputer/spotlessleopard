@@ -7,6 +7,10 @@
 				<img src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="30" width="30">
 			</a>
 
+			<a style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; z-index: 9999;" href="javascript:void(0);" onclick="scrollToDiv('info')">
+				<img src="<?php bloginfo('template_url'); ?>/inc/img/downarrow.svg"height="40" width="40">
+			</a>
+
 			<div class="container">
 
 				<?
@@ -114,6 +118,7 @@
 		</div>
 	</div>
 </div>
+<div id="info">
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 	the_content();
 endwhile; endif; ?>

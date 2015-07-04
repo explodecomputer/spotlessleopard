@@ -591,6 +591,18 @@ footer {
   color: white;
 }
 
+.vanjumbo {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/Leopard3.jpg);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 26%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  color: white;
+}
+
 .menujumbo {
   /*margin-bottom: 0px;*/
   background-image: url(inc/img/swirls2.jpg);

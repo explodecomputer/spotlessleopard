@@ -31,6 +31,12 @@ $(document).on('click','#replayBtn',function(){
 /** Reusable Functions **/
 /********************************************************************/
 
+
+function scrollToDiv(divid) {
+    $("html, body").animate({scrollTop: $("#"+divid).offset().top}, "slow");
+}
+
+
 function scaleVideoContainer() {
 
     var height = $(window).height();
