@@ -23,6 +23,7 @@ function getCalendar(){
 	$cal = new Google_Service_Calendar($client);
 	// $calendarId = 'c5lf84fmpd9pj2r0g4dqhk4hnk@group.calendar.google.com';
 	$calendarId = '3l0e1eu5i0kj1uh56mm2d19rkk@group.calendar.google.com';
+	// $calendarId = 'j6qpjrc9v5okmv3i6uh1srm2g4@group.calendar.google.com';
 
 	$params = array(
 
@@ -52,7 +53,7 @@ function getCategories($appointments, $pattern){
 	{
 		if($appointment->summary == $pattern)
 		{
-			if(strtotime($appointment->start->dateTime) < strtotime(date('Y-m-d', strtotime($now. ' + 7 days'))))
+			if(strtotime($appointment->start->dateTime) < strtotime(date('Y-m-d', strtotime($now. ' + 70 days'))))
 			{
 				array_push($regular, $appointment);				
 			}
@@ -127,11 +128,12 @@ function openOrClosed($regular){
 				$i = $i + 1;
 			}
 		}	
-		// $status = strtotime($regular[$i]->start->dateTime) - strtotime($now);
-		// $status = get_class($status);
-		$status = 'We will be serving again '.getDay($regular[$i]->start->dateTime).' from '.date("g.ia", strtotime($event->start->dateTime));
-		// $status = $i;
-		// $status = $regular[$i]->start->dateTime;
+		if(sizeof($regular) == 0)
+		{
+			$status = 'We will be serving again soon.';
+		} else {
+			$status = 'We will be serving again '.getDay($regular[$i]->start->dateTime).' from '.date("g.ia", strtotime($event->start->dateTime));
+		}
 	}
 	return $status;
 }
