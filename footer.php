@@ -22,7 +22,7 @@
 				Thu: 11am-4pm<br/>
 				Fri: 11am-4pm<br/>
 				Sat: 11am-5pm<br/>
-				Sun: 11am-4pm<br/>
+				Sun: Closed<br/>
 				</p>
 			</div>
 			<div class="col-md-2">
