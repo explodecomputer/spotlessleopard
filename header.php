@@ -38,6 +38,8 @@
 
 </head>
 
+<?php write_log('Visit: ' . $wp_query->post->post_title); ?>
+
 <body class="<?php echo strtolower($wp_query->post->post_title); ?>">
 <div id="startchange"></div>
 

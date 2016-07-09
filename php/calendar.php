@@ -16,7 +16,8 @@ Props to commenter Matt for pointing out the maxResults parameter.
 //DOWNLOAD IT AND PUT IT ON YOUR WEBSERVER IN THE ROOT FOLDER.
 
 function getCalendar(){
-	include(__DIR__.'/google-api-php-client/src/Google/autoload.php'); 	 
+	// include(__DIR__.'/google-api-php-client/src/Google/autoload.php');
+	require_once __DIR__.'/vendor/autoload.php';
 	$client = new Google_Client();
 	$client->setApplicationName("Spotless Leopard");
 	$client->setDeveloperKey('AIzaSyDMO5IzHHapmNae_i8pes_cOhE1G2k-SoQ');
