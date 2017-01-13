@@ -43,7 +43,7 @@
 			<div class="col-md-3">
 				<h3>Contact</h3>
 				<p>
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/Old_typical_phone_64 (1).png" height="15" style="padding-right: 5px;">07925641299<br/>
+					<!-- <img src="<?php bloginfo('template_url'); ?>/inc/img/Old_typical_phone_64 (1).png" height="15" style="padding-right: 5px;">07925641299<br/> -->
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/New_email_interface_symbol_of_black_closed_envelope_64 (1).png" height="15" style="padding-right: 5px;"><a href="mailto:info@thespotlessleopard.co.uk">info@thespotlessleopard.co.uk</a><br/>
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Facebook_logo_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://www.facebook.com/TheSpotlessLeopardUK">The SpotlessLeopardUK</a><br/>
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Twitter_Logo_Silhouette_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://twitter.com/thespotlessleop">@TheSpotlessLeop</a><br/>
