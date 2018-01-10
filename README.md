@@ -70,7 +70,9 @@ home page - we are [open closed] at regular spot - time when open
 consider putting proper event manager in
 
 
+## Notes 10-01-2018
 
+UpdraftPlus backup system currently going to my dropbox. Need to free up space so moving previous backups to ~/backups/Updraft
 
 
 
