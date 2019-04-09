@@ -1,10 +1,33 @@
 # spotlessleopard
 
 
-XAMPP configuration
+## Deployment
 
-themes are located here:
-Applications/XAMPP/xamppfiles/apps/wordpress/htdocs/wp-content/
+## Development
+
+Get mysql and wordpress docker containers
+
+```
+docker-compose down
+docker volume rm spotlessleopard_db_data
+docker-compose up -d
+docker exec -it spotlessleopard_wordpress_1 /bin/bash
+chown -R www-data:www-data temporary/
+chown -R www-data:www-data wp-content/
+```
+
+Navigate to [http://localhost:8000/wp-admin/](http://localhost:8000/wp-admin/)
+
+Install updraftplus plugin
+
+
+http://thespotlessleopard.co.uk
+
+http://localhost:8000
+
+
+docker exec -it spotlessleopard_wordpress_1 /bin/bash
+
 
 
 navbar: http://code.tutsplus.com/tutorials/how-to-integrate-bootstrap-navbar-into-wordpress-theme--wp-33410
@@ -74,5 +97,15 @@ consider putting proper event manager in
 
 UpdraftPlus backup system currently going to my dropbox. Need to free up space so moving previous backups to ~/backups/Updraft
 
+
+
+
+## to do
+
+- padding at top of home page to be reduced 
+- make it nice and reproducible
+- get acf export
+- list of plugins
+- 
 
 
