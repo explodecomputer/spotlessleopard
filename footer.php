@@ -11,6 +11,7 @@
 			<div class="col-md-2">
 				<h3>Summary</h3>
 				<p>Vegan food, served in a truck, at a pop-up, or at your next big event.</p>
+				<p>Named one of the best food trucks in the world by <a href="https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664">Lonely Planet</a>!</p>
 			</div>
 			<div class="col-md-2">
 				<!-- <hr> -->
@@ -29,7 +30,7 @@
 				<h3>Current status</h3>
 				<p><a href="<?php echo home_url(); ?>/location"><?php global $opentext; echo $opentext; ?></a></p>
 				<h3>Next Pop-up</h3>
-				<?
+				<?php
 				$myposts = get_posts(array(
 					'posts_per_page'=>'100', 
 					'post_status'=>'publish', 
@@ -38,15 +39,14 @@
 					'orderby'=>'meta_value',
 					'order'=>'ASC'));
 				?>
-				<p><? echo get_next_popup($myposts); ?></p>
+				<p><?php echo get_next_popup($myposts); ?></p>
 			</div>
 			<div class="col-md-3">
 				<h3>Contact</h3>
 				<p>
 					<!-- <img src="<?php bloginfo('template_url'); ?>/inc/img/Old_typical_phone_64 (1).png" height="15" style="padding-right: 5px;">07925641299<br/> -->
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/New_email_interface_symbol_of_black_closed_envelope_64 (1).png" height="15" style="padding-right: 5px;"><a href="mailto:info@thespotlessleopard.co.uk">info@thespotlessleopard.co.uk</a><br/>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/email_black.png" height="15" style="padding-right: 5px;"><a href="mailto:info@thespotlessleopard.co.uk">info@thespotlessleopard.co.uk</a><br/>
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Facebook_logo_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://www.facebook.com/TheSpotlessLeopardUK">The SpotlessLeopardUK</a><br/>
-					<img src="<?php bloginfo('template_url'); ?>/inc/img/Twitter_Logo_Silhouette_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://twitter.com/thespotlessleop">@TheSpotlessLeop</a><br/>
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Big_Instagram_logo_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://instagram.com/thespotlessleopard/">@thespotlessleopard</a><br/>
 				</p>
 				<div id="credits"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> Website created by <a href="http://github.com/explodecomputer">explodecomputer</a></div>

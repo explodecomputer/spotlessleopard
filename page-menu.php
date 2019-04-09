@@ -65,10 +65,10 @@ function menu_gallery($tag)
 </div>
 <div class="col-md-8 popuptitle">
 <h1>Mains</h1>
-<? menu_gallery("main"); ?>
+<?php menu_gallery("main"); ?>
 
 <h1>Sweet stuff</h1>
-<? menu_gallery("dessert"); ?>
+<?php menu_gallery("dessert"); ?>
 
 </div>
 </div>

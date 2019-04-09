@@ -108,7 +108,7 @@ echo the_field('regular_spot');
 <div class="row smallbuff">
 <div class="col-md-4 text-right popuptitle">
 
-<?
+<?php
 	the_content();
 ?>
 
@@ -126,7 +126,7 @@ echo the_field('regular_spot');
 <div class="col-md-10 popuptitle text-center">
 	<h2>Special events</h2>
 
-<? 
+<?php
 echo the_field('special_events');
 ?>
 
@@ -138,11 +138,8 @@ echo the_field('special_events');
 
 </div>
 </div>
-<? endwhile; endif; ?>
+<?php endwhile; endif; ?>
 
 
 
 <?php get_footer(); ?>
-
-
-

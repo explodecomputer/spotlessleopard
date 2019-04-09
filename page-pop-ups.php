@@ -29,18 +29,18 @@ endwhile; endif; ?>
 
 			<!-- <div class="buff"></div> -->
 			<h1 class="nopads">Upcoming</h1>
-			<?
+			<?php
 			$myposts = get_posts(array(
 				'posts_per_page'=>'100', 
 				'post_status'=>'publish', 
 				'category_name'=>'Pop-up',
 				'meta_key'=>'start_time',
 				'orderby'=>'meta_value',
-				'order'=>'ASC'));
+				'order'=>'DESC'));
 			print_popup_list($myposts, '', 1, 1);
 			?>
 			<h1 class="nopads">Previous</h1>
-			<?
+			<?php
 			print_popup_list($myposts, '', -1, 1);
 			?>
 		</div>

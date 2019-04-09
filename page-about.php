@@ -37,7 +37,7 @@ the_content();
 <h2>In the press</h2>
 </div>
 <div class="col-md-8 leftborder presslinks">
-<?
+<?php
 echo the_field('press');
 endwhile; endif; ?>
 </div>

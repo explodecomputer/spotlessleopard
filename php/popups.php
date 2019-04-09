@@ -1,5 +1,4 @@
-
-<?
+<?php
 
 function human_date($timestamp, $informat = 'Y-m-d H:i:s', $outformat = 'l jS F Y')
 {
@@ -36,19 +35,21 @@ function print_popup_list($myposts, $thisclass='', $future, $concise = 0)
 	$nextpost = 0;
 	$published_posts = $count_posts->publish;
 	global $post;
+	$flag = 0;
 	foreach($myposts as $post) :
 		global $post;
 		setup_postdata($post);
 		$now = date("Y-m-d H:i:s");
-		if(get_sign(strtotime(get_field('start_time')) - strtotime($now)) == get_sign($future))
+		if(get_sign(strtotime( get_field('start_time')) - strtotime($now)) == get_sign($future))
 		{
+			$flag += 1;
 			if($concise == 1)
 			{
 				echo '<hr class="fuzzy">';
 			}
 			echo '<div class="row ' . $thisclass . '">';
 			echo '<div class="col-md-1 bigdate text-left">';
-			bigdate(get_field('start_time'));
+			bigdate( get_field('start_time'));
 			echo '</div>';
 			echo '<div class="col-md-10 information text-left">';
 			echo '<p class=""><a href="';
@@ -74,6 +75,13 @@ function print_popup_list($myposts, $thisclass='', $future, $concise = 0)
 			echo '</div>';
 		}
 	endforeach;
+	if($flag == 0)
+	{
+		echo '<hr class="fuzzy">';
+		echo '<div class="row ' . $thisclass . '">';
+		echo '<p class="">No upcoming pop-ups for now. Keep checking back!';
+		echo '</div>';
+	}
 	wp_reset_postdata(); 
 }
 
@@ -90,16 +98,16 @@ function get_next_popup($myposts, $thisclass='')
 		setup_postdata($post);
 		$flag = 0;
 		$now = date("Y-m-d H:i:s");
-		if($now < get_field('start_time'))
+		if($now <  get_field('start_time'))
 		{
-			// echo strtotime($now) - strtotime(get_field('start_time'));
+			// echo strtotime($now) - strtotime( get_field('start_time'));
 			$flag = 1;
 			echo '<span class="' . $thisclass . '"><a href="';
 			the_permalink();
 			echo '">';
 			the_title();
 			echo '</a>';
-			echo ' at ' . human_date(get_field('start_time'), 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date(get_field('start_time')) . '</span>';
+			echo ' at ' . human_date( get_field('start_time'), 'Y-m-d H:i:s', 'g:ia') . ' on ' . human_date( get_field('start_time')) . '</span>';
 			break;
 		}
 	endforeach;

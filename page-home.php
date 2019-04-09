@@ -13,7 +13,7 @@
 
 			<div class="container">
 
-				<?
+				<?php
 				$myposts = get_posts(array(
 					'posts_per_page'=>'100', 
 					'post_status'=>'publish', 
@@ -24,13 +24,20 @@
 				?>
 
 
-				<div class="row smallbuff">
+<!-- 				<div class="row smallbuff">
 					<div class="col-md-3"></div>
 					<div class="col-md-6 text-center">
 					<h3><a class="popupheadline" href="https://www.crowdfunder.co.uk/repairs-to-the-spotless-leopard-vegan-van">Help us with our crowdfunding campaign!</a></h3>
 					</div>
 				</div>
-
+ -->
+	 			<div class="row smallbuff">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4 text-center hidden-xs">
+						<img src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="220">
+					</div>
+				</div>
 				<div class="row smallbuff">
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
@@ -44,10 +51,18 @@
 						</div>
 						<div class="row">
 							<div class="col-md-6 headline ">
-								<h4><? echo get_next_popup($myposts); ?></h4>
+								<h4><?php echo get_next_popup($myposts); ?></h4>
 							</div>
 							<div class="col-md-6 headline">
 								<h3><a class="popupheadline" href="<?php echo home_url(); ?>/pop-ups">Pop-up reservations</a></h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 headline ">
+								<h4>We cater for weddings and special events</h4>
+							</div>
+							<div class="col-md-6 headline">
+								<h3><a class="contactheadline" href="mailto:info@thespotlessleopard.co.uk">Contact us</a></h3>
 							</div>
 						</div>
 					</div>
@@ -55,13 +70,15 @@
 					</div>
 				</div>
 	 			<div class="row smallbuff">
-					<div class="col-md-4">
+					<div class="col-md-3">
 					</div>
-					<div class="col-md-4 text-center hidden-xs">
-						<img src="<?php bloginfo('template_url'); ?>/inc/img/ai/logo-17.png" width="220">
+					<div class="col-md-6 text-center hidden-xs">
+						<a href='https://www.addtoevent.co.uk/the-spotless-leopard'><img src="<?php bloginfo('template_url'); ?>/inc/img/featured_circular_white_large.png" width="100"></a>
+						<a href='https://www.vegfest.co.uk/2018/10/27/vegfestuk-awards-2018-full-results/'><img src="<?php bloginfo('template_url'); ?>/inc/img/vegfest-award-2018.png" width="100"></a>
+						<a href='https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664'><img src="<?php bloginfo('template_url'); ?>/inc/img/lonelyplanet-award.png" width="100"></a>
+
 					</div>
 				</div>
-
 <!-- <a id="replayBtn" href="#"><img src="<?php bloginfo('template_url'); ?>/inc/img/replay2.png" height="20" width="20"></a> -->
 
 <!-- 

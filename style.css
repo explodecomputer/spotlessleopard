@@ -140,7 +140,7 @@ td {
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 25%;
+  top: 15%;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -267,6 +267,15 @@ a.popupheadline {
   color: #CEA82B;
   padding-left: 35px;
   background: transparent url(inc/img/leaf_64.png) no-repeat top left;
+  border: none;
+}
+
+a.contactheadline {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase; 
+  color: #CEA82B;
+  padding-left: 35px;
+  background: transparent url(inc/img/email_white.png) no-repeat top left;
   border: none;
 }
 
@@ -581,7 +590,9 @@ footer {
 
 .aboutjumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/louiseinvan.jpg);
+  /*background-image: url(inc/img/phil/D32P6564.jpg);*/
+  /*background-image: url(inc/img/phil/D32P6550.jpg);*/
+  background-image: url(inc/img/phil/D32P6526.jpg);
   /*background-color: red;*/
   height: 500px;
   background-position: 0% 26%;
@@ -605,9 +616,10 @@ footer {
 
 .menujumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/swirls2.jpg);
+  /*background-image: url(inc/img/swirls2.jpg);*/
+  background-image: url(inc/img/phil/D32P6352.jpg);
   /*background-color: red;*/
-  height: 500px;
+  height: 700px;
   background-position: 0% 25%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -617,7 +629,20 @@ footer {
 
 .popupjumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/raspberries.jpg);
+  background-image: url(inc/img/_BBK2611.jpg);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  color: white;
+}
+
+
+.cateringjumbo {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/choc.JPG);
   /*background-color: red;*/
   height: 500px;
   background-position: 0% 25%;
@@ -665,7 +690,7 @@ footer {
   color: white;
 }
 
-.menujumbo h1, .popupjumbo h1, .partnersjumbo h1, .aboutjumbo h1 {
+.menujumbo h1, .popupjumbo h1, .cateringjumbo h1, .partnersjumbo h1, .aboutjumbo h1 {
   margin-top: 160px;
   font-family: 'Lora', serif;
   font-size: 100px;
@@ -674,7 +699,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .menujumbo h1, .popupjumbo h1, .partnersjumbo h1, .aboutjumbo h1 {
+  .menujumbo h1, .popupjumbo h1, .cateringjumbo h1, .partnersjumbo h1, .aboutjumbo h1 {
     font-size: 50px;
   }
 }

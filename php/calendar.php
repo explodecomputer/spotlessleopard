@@ -256,10 +256,10 @@ function displayEvents($regular, $calTimeZone, $nevents, $divclass)
 function displayOpenings($regular, $calTimeZone, $nevents, $divclass)
 {
 	if(isset($divclass)) {?>
-	<table class="<? echo $divclass; ?>">
-	<? } else { ?> 
+	<table class="<?php echo $divclass; ?>">
+	<?php } else { ?> 
 	<table>
-	<? }
+	<?php }
 
 	$i=0;
 	foreach ($regular as $event) {
@@ -310,7 +310,7 @@ function displayOpenings($regular, $calTimeZone, $nevents, $divclass)
 	}
 	?>
 	</table>
-	<?
+	<?php
 }
 
 
@@ -327,4 +327,3 @@ global $opentext;
 $opentext = openOrClosed($regular);
 
 ?>
-

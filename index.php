@@ -11,22 +11,22 @@
 <div class="row buff">
 <div class="col-md-4 text-right popuptitle rightborder">
 
-<h2><? the_title(); ?></h2>
+<h2><?php the_title(); ?></h2>
 
 <div>
-	<? 
+	<?php
 	bigdate(get_field('start_time'));
 	?>
 </div>
-<p class="wday"><? echo human_date(get_field('start_time'), 'Y-m-d H:i:s', 'g:ia'); ?> - <? echo human_date(get_field('end_time'), 'Y-m-d H:i:s', 'g:ia'); ?></p>
-<p class="wday"><? echo get_field('location'); ?></p>
-<p class="wday"><? echo get_field('price'); ?></p>
+<p class="wday"><?php echo human_date(get_field('start_time'), 'Y-m-d H:i:s', 'g:ia'); ?> - <?php echo human_date(get_field('end_time'), 'Y-m-d H:i:s', 'g:ia'); ?></p>
+<p class="wday"><?php echo get_field('location'); ?></p>
+<p class="wday"><?php echo get_field('price'); ?></p>
 <p class="wday">For bookings contact us at <a href="mailto:info@thespotlessleopard.co.uk">info@thespotlessleopard.co.uk</a></p>
 
 </div>
 <div class="col-md-8">
-<? the_content(); ?>
-<? endwhile; endif; ?>
+<?php the_content(); ?>
+<?php endwhile; endif; ?>
 </div>
 </div>
 
