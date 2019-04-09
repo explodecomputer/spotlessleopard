@@ -1,24 +1,58 @@
 # spotlessleopard
 
+## Secrets
+
+Need a file called `secrets.env` that looks like this:
+
+```
+MYSQL_ROOT_PASSWORD=VALUE
+MYSQL_PASSWORD=VALUE
+MYSQL_USER=wordpress
+MYSQL_DATABASE=wordpress
+WORDPRESS_DB_USER=wordpress
+WORDPRESS_DB_PASSWORD=VALUE
+WORDPRESS_DB_NAME=wordpress
+```
 
 ## Deployment
 
 ## Development
 
+
+
 Get mysql and wordpress docker containers
 
 ```
+wget https://github.com/interconnectit/Search-Replace-DB/archive/master.zip
+unzip master.zip
 docker-compose down
 docker volume rm spotlessleopard_db_data
 docker-compose up -d
 docker exec -it spotlessleopard_wordpress_1 /bin/bash
 chown -R www-data:www-data temporary/
 chown -R www-data:www-data wp-content/
+exit
 ```
 
 Navigate to [http://localhost:8000/wp-admin/](http://localhost:8000/wp-admin/)
 
 Install updraftplus plugin
+
+Activate updraftplus plugin
+
+Upload backup files
+- db
+- uploads
+- plugins
+- other
+
+Restore from these files
+
+Make sure that the following plugins are activated:
+
+- Advanced Custom Fields
+- Advanced Custom Fields: Date and Time Picker
+
 
 
 http://thespotlessleopard.co.uk
