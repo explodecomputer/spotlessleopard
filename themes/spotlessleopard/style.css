@@ -592,7 +592,7 @@ footer {
   /*margin-bottom: 0px;*/
   /*background-image: url(inc/img/phil/D32P6564.jpg);*/
   /*background-image: url(inc/img/phil/D32P6550.jpg);*/
-  background-image: url(inc/img/phil/D32P6526.jpg);
+  background-image: url(inc/img/phil/D32P6526_small.jpg);
   /*background-color: red;*/
   height: 500px;
   background-position: 0% 26%;
@@ -604,10 +604,10 @@ footer {
 
 .vanjumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/Leopard3.jpg);
+  background-image: url(inc/img/D32P6289-2.jpg);
   /*background-color: red;*/
-  height: 500px;
-  background-position: 0% 26%;
+  height: 400px;
+  background-position: 0% 40%;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px;
@@ -617,7 +617,7 @@ footer {
 .menujumbo {
   /*margin-bottom: 0px;*/
   /*background-image: url(inc/img/swirls2.jpg);*/
-  background-image: url(inc/img/phil/D32P6352.jpg);
+  background-image: url(inc/img/phil/D32P6352_small.jpg);
   /*background-color: red;*/
   height: 700px;
   background-position: 0% 25%;
@@ -642,10 +642,22 @@ footer {
 
 .cateringjumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/choc.JPG);
+  background-image: url(inc/img/lawes2.png);
   /*background-color: red;*/
   height: 500px;
   background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  color: white;
+}
+
+.cateringjumbo2 {
+  /*margin-bottom: 0px;*/
+  background-image: url(inc/img/cateringjumbo2.jpg);
+  /*background-color: red;*/
+  height: 500px;
+  background-position: 0% 26%;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px;
@@ -977,4 +989,9 @@ hr.fuzzy {
 #footerlogo a {
   text-decoration: none; 
   border: none;
+}
+
+
+.menuimg {
+  margin: 4px;
 }

@@ -17,19 +17,12 @@ function menu_gallery($tag)
 		foreach ( $attachments as $attachment ) {
 			if(get_field('imagetag', $attachment->ID) == $tag)
 			{
-				echo '<div class="row"><div class="col-md-5">';
 				echo '<a href="' . $attachment->guid . '" data-lightbox="food" data-title="';
 				echo apply_filters( 'the_title', $attachment->post_title ) . ': ';
 				echo $attachment->post_content;
 				echo '">';
-				echo wp_get_attachment_image( $attachment->ID, 'medium' );
-				echo '</a></div><div class="col-md-7">';
-				echo '<h2>';
-				echo apply_filters( 'the_title', $attachment->post_title );
-				echo '</h2>';
-				echo '<p>';
-				echo $attachment->post_content;
-				echo '</p></div></div><hr class="fuzzy">';
+				echo wp_get_attachment_image( $attachment->ID, 'thumbnail', "", ["class" => "menuimg"] );
+				echo '</a>';
 			}
 		}
 	}
@@ -56,20 +49,23 @@ function menu_gallery($tag)
 
 <div class="container">
 <div class="row buff">
-<div class="col-md-4 text-right menublurb rightborder">
+<div class="col-md-4 menublurb">
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 		the_content();
 	endwhile; endif; ?>
-
 </div>
 <div class="col-md-8 popuptitle">
-<h1>Mains</h1>
+<!-- <h1>Mains</h1> -->
 <?php menu_gallery("main"); ?>
+</div>
+<div class="row"><div class="col-md-4"></div>
+<div class="col-md-8 popuptitle">
 
-<h1>Sweet stuff</h1>
+<!-- <h1>Sweet stuff</h1> -->
 <?php menu_gallery("dessert"); ?>
 
+</div>
 </div>
 </div>
 </div>

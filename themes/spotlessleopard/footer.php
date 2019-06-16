@@ -11,8 +11,15 @@
 			<div class="col-md-2">
 				<h3>Summary</h3>
 				<p>Vegan food, served in a truck, at a pop-up, or at your next big event.</p>
-				<p>Named one of the best food trucks in the world by <a href="https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664">Lonely Planet</a>!</p>
+				<h3>We accept</h3>
+				<p>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/logo-notag.svg" width="80"></a>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/contactless.png" width="50"></a>
+					<img src="<?php bloginfo('template_url'); ?>/inc/img/square.jpg" width="130"></a>
+				</p>
+
 			</div>
+
 			<div class="col-md-2">
 				<!-- <hr> -->
 				<h3>Usual Hours</h3>
@@ -50,6 +57,12 @@
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Big_Instagram_logo_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://instagram.com/thespotlessleopard/">@thespotlessleopard</a><br/>
 				</p>
 				<div id="credits"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> Website created by <a href="http://github.com/explodecomputer">explodecomputer</a></div>
+				<br>
+				<div>
+					<a href='https://www.addtoevent.co.uk/the-spotless-leopard'><img src="<?php bloginfo('template_url'); ?>/inc/img/featured_circular_white_large.png" width="80"></a>
+						<a href='https://www.vegfest.co.uk/2018/10/27/vegfestuk-awards-2018-full-results/'><img src="<?php bloginfo('template_url'); ?>/inc/img/vegfest-award-2018.png" width="80"></a>
+						<a href='https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664'><img src="<?php bloginfo('template_url'); ?>/inc/img/lonelyplanet-award.png" width="80"></a>
+				</div>
 			</div>
 
 		</div>

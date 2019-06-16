@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="jumbotron aboutjumbo">
-	<a id="photocredit" href="http://abbiestewart.com/">Photo credit: Abbie Stewart</a>
+	Photo credit: Phil Randall
 <div class="container">
 
 	<div class="row">

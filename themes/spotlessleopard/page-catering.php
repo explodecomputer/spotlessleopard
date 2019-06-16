@@ -15,10 +15,12 @@
 </div>
 </div>
 
-<div class="container">
+<!-- <div class="container">
 	<div class="row buff">
 		<div class="col-md-2"></div>
 		<div class="col-md-8 text-center">
+
+
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 	the_content();
@@ -27,6 +29,11 @@ endwhile; endif; ?>
 		</div>
 	</div>
 </div>
+ -->
+<div id="info">
+<?php if ( have_posts() ) : while( have_posts() ) : the_post();
+	the_content();
+endwhile; endif; ?>
 
 
 <?php get_footer(); ?>
