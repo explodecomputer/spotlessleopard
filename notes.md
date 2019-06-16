@@ -70,3 +70,16 @@ UpdraftPlus backup system currently going to my dropbox. Need to free up space s
 
 
 
+## Notes 16-06-2019
+
+louise
+Huxley the dog
+
+ Main deployment is thespotlessleopard.co.uk on digital ocean. Temporarily also here [http://68.183.45.84/](http://68.183.45.84/). Can also deploy locally. Each deployment has a different database. How to sync those? Hmm.
+
+ TODO:
+
+ - Get permission to use catering picture
+ - Update catering page, needs testamonials 
+ - Figure out deployment system
+ - Update website
