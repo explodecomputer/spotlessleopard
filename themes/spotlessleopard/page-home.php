@@ -76,6 +76,7 @@
 						<a href='https://www.addtoevent.co.uk/the-spotless-leopard'><img src="<?php bloginfo('template_url'); ?>/inc/img/featured_circular_white_large.png" width="100"></a>
 						<a href='https://www.vegfest.co.uk/2018/10/27/vegfestuk-awards-2018-full-results/'><img src="<?php bloginfo('template_url'); ?>/inc/img/vegfest-award-2018.png" width="100"></a>
 						<a href='https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664'><img src="<?php bloginfo('template_url'); ?>/inc/img/lonelyplanet-award.png" width="100"></a>
+						<a href='https://www.rockmywedding.co.uk/thelist/suppliers/the-spotless-leopard/'><img src="<?php bloginfo('template_url'); ?>/inc/img/rmw.png" width="100"></a>
 
 					</div>
 				</div>

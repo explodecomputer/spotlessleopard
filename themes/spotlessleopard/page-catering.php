@@ -2,6 +2,9 @@
 
 <div class="jumbotron cateringjumbo">
 <div class="container">
+	<div id="photocredit">
+		<p id="credits">Photograph by <a href="">chloemaryphotography.co.uk</a></p>
+	</div>
 	<div class="row">
 		<div class="col-md-2">
 		</div>

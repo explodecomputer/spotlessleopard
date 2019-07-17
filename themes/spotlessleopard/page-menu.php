@@ -33,6 +33,9 @@ function menu_gallery($tag)
 
 <div class="jumbotron menujumbo">
 <div class="container">
+	<div id="photocreditlarge">
+		<p id="credits">Photograph by Phil Randall</p>
+	</div>
 	<div class="row">
 		<div class="col-md-2">
 		</div>

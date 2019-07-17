@@ -83,3 +83,11 @@ Huxley the dog
  - Update catering page, needs testamonials 
  - Figure out deployment system
  - Update website
+
+
+
+## Notes 17-07-2019
+
+- Photo credit positioning
+- Fix positioning on catering page
+

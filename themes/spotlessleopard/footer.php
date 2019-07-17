@@ -56,13 +56,14 @@
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Facebook_logo_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://www.facebook.com/TheSpotlessLeopardUK">The SpotlessLeopardUK</a><br/>
 					<img src="<?php bloginfo('template_url'); ?>/inc/img/Big_Instagram_logo_64 (1).png" height="15" style="padding-right: 5px;"><a target="_blank" href="https://instagram.com/thespotlessleopard/">@thespotlessleopard</a><br/>
 				</p>
-				<div id="credits"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> Website created by <a href="http://github.com/explodecomputer">explodecomputer</a></div>
-				<br>
-				<div>
-					<a href='https://www.addtoevent.co.uk/the-spotless-leopard'><img src="<?php bloginfo('template_url'); ?>/inc/img/featured_circular_white_large.png" width="80"></a>
-						<a href='https://www.vegfest.co.uk/2018/10/27/vegfestuk-awards-2018-full-results/'><img src="<?php bloginfo('template_url'); ?>/inc/img/vegfest-award-2018.png" width="80"></a>
-						<a href='https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664'><img src="<?php bloginfo('template_url'); ?>/inc/img/lonelyplanet-award.png" width="80"></a>
+				<div class="text-center">
+					<a href='https://www.addtoevent.co.uk/the-spotless-leopard'><img src="<?php bloginfo('template_url'); ?>/inc/img/featured_circular_white_large.png" width="90"></a>
+						<a href='https://www.vegfest.co.uk/2018/10/27/vegfestuk-awards-2018-full-results/'><img src="<?php bloginfo('template_url'); ?>/inc/img/vegfest-award-2018.png" width="90"></a>
+						<a href='https://www.bristolpost.co.uk/whats-on/food-drink/the-spotless-leopard-vegan-food-2631664'><img src="<?php bloginfo('template_url'); ?>/inc/img/lonelyplanet-award.png" width="90"></a>
+						<a href='https://www.rockmywedding.co.uk/thelist/suppliers/the-spotless-leopard/'><img src="<?php bloginfo('template_url'); ?>/inc/img/rmw.png" width="90"></a>
 				</div>
+				<br>
+				<div id="credits"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> Website created by <a href="http://github.com/explodecomputer">explodecomputer</a></div>
 			</div>
 
 		</div>

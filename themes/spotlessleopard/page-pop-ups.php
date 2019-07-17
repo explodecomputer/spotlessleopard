@@ -2,6 +2,10 @@
 
 <div class="jumbotron popupjumbo">
 <div class="container">
+	<div id="photocredit">
+		<p id="credits">Photograph by the excellent <a href="https://www.instagram.com/brtknr/">Bharat Kunwar</a></p>
+	</div>
+
 	<div class="row">
 		<div class="col-md-2">
 		</div>

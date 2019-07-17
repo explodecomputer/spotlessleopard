@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <div class="jumbotron aboutjumbo">
-	Photo credit: Phil Randall
 <div class="container">
+	<div id="photocredit">
+		<p id="credits">Photograph by Phil Randall</p>
+	</div>
 
 	<div class="row">
 		<div class="col-md-2">

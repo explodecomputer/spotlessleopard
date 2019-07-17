@@ -471,6 +471,14 @@ a.locationpin {
   color: white;
 }
 
+.testimonial {
+  font-family: 'Lobster', sans-serif;
+  /*border: 5px dotted white;*/
+  border-radius: 15px;
+  padding: 0px 7px;
+  /*background-color: white;*/
+  color: black;
+}
 
 
 
@@ -642,7 +650,7 @@ footer {
 
 .cateringjumbo {
   /*margin-bottom: 0px;*/
-  background-image: url(inc/img/lawes2.png);
+  background-image: url(inc/img/Kai_and_Beth_Arnos_Vale_Wedding-209.jpg);
   /*background-color: red;*/
   height: 500px;
   background-position: 0% 25%;
@@ -911,15 +919,27 @@ hr.fuzzy {
 
 #credits, #credits a {
   font-size: 10px;
+  color: white;
 }
 
 
 #photocredit {
   position: absolute;
   top: 485px;
-  right: 5px;
+  left: 0;
   font-size: 10px;
-  color: black;
+  color: white;
+  z-index: 99999;
+  /*margin-top: 30px;*/
+  /*top: 30px;*/
+}
+
+#photocreditlarge {
+  position: absolute;
+  top: 685px;
+  left: 0;
+  font-size: 10px;
+  color: white;
   z-index: 99999;
   /*margin-top: 30px;*/
   /*top: 30px;*/
