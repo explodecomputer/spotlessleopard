@@ -51,25 +51,28 @@ function menu_gallery($tag)
 
 
 <div class="container">
-<div class="row buff">
-<div class="col-md-4 menublurb">
+	<div class="row buff">
+		<div class="col-md-4 menublurb">
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post();
 		the_content();
 	endwhile; endif; ?>
-</div>
-<div class="col-md-8 popuptitle">
+		</div>
+
+		<div class="col-md-8 popuptitle">
 <!-- <h1>Mains</h1> -->
 <?php menu_gallery("main"); ?>
-</div>
-<div class="row"><div class="col-md-4"></div>
-<div class="col-md-8 popuptitle">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-8 popuptitle">
 
 <!-- <h1>Sweet stuff</h1> -->
 <?php menu_gallery("dessert"); ?>
 
-</div>
-</div>
+		</div>
 </div>
 </div>
 
