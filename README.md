@@ -14,11 +14,18 @@ WORDPRESS_DB_PASSWORD=VALUE
 WORDPRESS_DB_NAME=wordpress
 ```
 
-## Deployment
 
-Get mysql and wordpress docker containers
+## Local development
+
+The database backups need to be made available through updraftplus. From an existing instance
+
+1. Make sure updraftplus plugin is installed
+2. Export the database, plugins and uploads
+
+Now create the wordpress environment in docker
 
 ```
+git clone git@github.com:explodecomputer/spotlessleopard.git && cd spotlessleopard
 wget https://github.com/interconnectit/Search-Replace-DB/archive/master.zip
 unzip master.zip
 docker-compose down
@@ -30,30 +37,9 @@ chown -R www-data:www-data wp-content/
 exit
 ```
 
-Navigate to [http://localhost:8000/wp-admin/](http://localhost:8000/wp-admin/)
+Now navigate to [http://localhost:8000](http://localhost:8000), install and activate the updraftplus plugin, and restore from the backups that were made from the existing instance.
 
-Install updraftplus plugin
-
-Activate updraftplus plugin
-
-Upload backup files
-- db
-- uploads
-- plugins
-- other
-
-Restore from these files
-
-Now update the url address. Navigate to [http://localhost:8000/temporary/Search-Replace-DB-master/](http://localhost:8000/temporary/Search-Replace-DB-master/)
-
-Or try doing it using CLI:
-
-```
-docker exec -it spotlessleopard_wordpress_1 /bin/bash
-php srdb.cli.php -h db --port 3306 -u root -p 0dme9Ft0Bk -n wordpress -s http://localhost:8000 -r http://68.183.45.84 -z
-```
-
-Or, change the URL directly in the `db.gz` file to be uploaded.
+Finally, navigate to [http://localhost:8000/temporary/Search-Replace-DB](http://localhost:8000/temporary/Search-Replace-DB) and replace in the database the url for the original instance for 'localhost:8000'.
 
 Make sure that the following plugins are activated:
 
@@ -64,10 +50,7 @@ Make sure that the following plugins are activated:
 
 ## To do
 
-- change photo attributes
 - compress new photos
-- catering page to be updated
-- deploy to proper url
 - check that updraftplus is doing backups
 - make backup of ACF json
 
