@@ -28,7 +28,7 @@
 				Tue: 11am-4pm<br/>
 				Wed: 11am-4pm<br/>
 				Thu: 11am-4pm<br/>
-				Fri: 11am-4pm<br/>
+				Fri: Closed<br/>
 				Sat: Closed<br/>
 				Sun: Closed<br/>
 				</p>
