@@ -24,6 +24,7 @@ services:
        - ./secrets.env
      volumes: 
        - ./themes/:/var/www/html/wp-content/themes/
+       - ./backup/:/var/www/html/wp-content/updraft/
        - ./Search-Replace-DB-master/:/var/www/html/temporary/Search-Replace-DB-master/
 volumes:
     db_data: {}
