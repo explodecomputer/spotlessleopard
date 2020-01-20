@@ -30,6 +30,16 @@ chown -R www-data:www-data wp-content/
 exit
 ```
 
+Make sure that the backup files are in the `backup` folder. They look like this:
+
+```
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-db.gz
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-plugins.zip
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-uploads.zip
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-uploads2.zip
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-uploads3.zip
+```
+
 Navigate to [http://localhost:8000/wp-admin/](http://localhost:8000/wp-admin/)
 
 Install updraftplus plugin
