@@ -37,14 +37,57 @@ chown -R www-data:www-data wp-content/
 exit
 ```
 
-Now navigate to [http://localhost:8000](http://localhost:8000), install and activate the updraftplus plugin, and restore from the backups that were made from the existing instance.
+Make sure that the backup files are in the `backup` folder. They look like this:
 
-Finally, navigate to [http://localhost:8000/temporary/Search-Replace-DB](http://localhost:8000/temporary/Search-Replace-DB) and replace in the database the url for the original instance for 'localhost:8000'.
+```
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-db.gz
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-plugins.zip
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-uploads.zip
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-uploads2.zip
+backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-uploads3.zip
+```
+
+Navigate to [http://localhost:8000/wp-admin/](http://localhost:8000/wp-admin/)
+
+Install updraftplus plugin
+
+Activate updraftplus plugin
+
+Upload backup files
+- db
+- uploads
+- plugins
+- other
+
+Restore from these files.
 
 Make sure that the following plugins are activated:
 
 - Advanced Custom Fields
 - Advanced Custom Fields: Date and Time Picker
+
+## Backup files
+
+The backup database files have urls in them, and need to reflect the location they are being served in. Could use sed e.g.
+
+```
+gunzip -c backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-db.gz > temp
+sed -i 's@http://localhost:8000@http://thespotlessleopard.co.uk@g' temp
+gzip -c temp > backup_2019-07-17-2145_The_Spotless_Leopard_9d03732cf672-db.gz
+```
+
+
+Or navigate to [http://localhost:8000/temporary/Search-Replace-DB-master/](http://localhost:8000/temporary/Search-Replace-DB-master/)
+
+and replace in the database the url for the original instance for 'localhost:8000'.
+
+Or try doing it using CLI:
+
+```
+docker exec -it spotlessleopard_wordpress_1 /bin/bash
+php srdb.cli.php -h db --port 3306 -u root -p 0dme9Ft0Bk -n wordpress -s http://localhost:8000 -r http://68.183.45.84 -z
+```
+
 
 ---
 
